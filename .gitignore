@@ -1,0 +1,38 @@
+# --- Alteryx Specific ---
+# ワークフロー保存時に自動生成されるバックアップファイル
+*.bak
+
+# 実行中や異常終了時に残るロックファイル
+*.lock
+
+# パッケージ化されたワークフロー（配布用なのでソース管理には含めないのが一般的）
+*.yxzp
+
+# --- Data Files ---
+# 大容量データや中間データはリポジトリを圧迫するため除外
+# ※ 読み込み用の小さなサンプルCSVなどは、個別に git add -f する運用がおすすめ
+*.yxdb
+*.cydb
+*.tde
+*.hyper
+*.csv
+*.xlsx
+*.xlsm
+*.xls
+*.sqlite
+*.mdb
+
+# --- Logs & Temp ---
+# 実行ログやエンジンが出力する一時テキスト
+*.log
+Engine_*.txt
+
+# --- OS & IDE ---
+# Windowsのサムネイルキャッシュ
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+
+# VS Code などのエディタ設定（XMLを直接編集する場合など）
+.vscode/
+.idea/
