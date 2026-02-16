@@ -5,20 +5,36 @@
 - [My solution](https://community.alteryx.com/t5/Weekly-Challenges/Challenge-499-Where-is-Waldo/m-p/1431672/highlight/true#M154460)
 
 ## Summary
-    Read .xlsx files under "Places" directory 
-    Find a sheet where "Is Waldo here?" = "Y"
+```
+Read .xlsx files under "Places" directory 
+Find a sheet where "Is Waldo here?" = "Y"
+```
 
 ## Workflow
 
 ![Workflow](Challenge499-wf.png)
 
 ## Main Process
-- Step1: Read parent directory
-- Step2: Edit full path to read <List of Sheet Names>
-- Step3: Get the list of sheet names
-- Step4: Read all the sheets
-- Step5: Filter "Is Waldo here?"
-- Step6: Parse full path to get Folder/Subfolder/File/Sheet
+```
+Step1: Read parent directory
+Step2: Edit full path to read <List of Sheet Names>
+Step3: Get the list of sheet names
+Step4: Read all the sheets
+Step5: Filter "Is Waldo here?"
+Step6: Parse full path to get Folder/Subfolder/File/Sheet
+```
+
+## Tool Configurations
+```
+Formula-1)    [FullPath] = [FullPath] + "|||<List of Sheet Names>"
+Formula-2)    [FileName] = Replace([FileName], "<List of Sheet Names>", [Sheet Names])
+Filter)    [Is waldo here?] = "Y"
+Formula-3) 
+    [Folder] = REGEX_Replace([FileName], ".*\\(Folder.*?)\\.*", "$1")
+    [Subfolder] = REGEX_Replace([FileName], ".*\\(Sub.*?)\\.*", "$1")
+    [File] = REGEX_Replace([FileName], ".*\\(File.*?)\|.*", "$1")
+    [Sheet] = REGEX_Replace([FileName], ".*\|(Sheet.*)", "$1")
+```
 
 ## Last Update
 2026-02-16
