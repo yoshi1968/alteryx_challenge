@@ -1,0 +1,904 @@
+<?xml version="1.0"?>
+<AlteryxDocument yxmdVer="2025.2" RunE2="T">
+  <Nodes>
+    <Node ToolID="1">
+      <GuiSettings Plugin="AlteryxGuiToolkit.Questions.Tab.Tab">
+        <Position x="0" y="0" width="59" height="59" />
+      </GuiSettings>
+      <Properties>
+        <Configuration />
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+    </Node>
+    <Node ToolID="14">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Filter.Filter">
+        <Position x="1266" y="198" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Expression>[duration_ms] &lt;= [max_duration_ms]</Expression>
+          <Mode>Custom</Mode>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>[duration_ms] &lt;= [max_duration_ms]</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="True">
+          <RecordInfo>
+            <Field name="chartRankMove" size="9" source="File: C:\Users\emille99\Documents\Alteryx Weekly Challenges\Weekly Challenge Ideas\podcasts\episodes.csv" type="V_String" />
+            <Field name="date" source="File: C:\Users\emille99\Documents\Alteryx Weekly Challenges\Weekly Challenge Ideas\podcasts\episodes.csv" type="Date" />
+            <Field name="description" size="5351" source="File: C:\Users\emille99\Documents\Alteryx Weekly Challenges\Weekly Challenge Ideas\podcasts\episodes.csv" type="V_String" />
+            <Field name="duration_ms" source="File: C:\Users\emille99\Documents\Alteryx Weekly Challenges\Weekly Challenge Ideas\podcasts\episodes.csv" type="Double" />
+            <Field name="episodeName" size="228" source="File: C:\Users\emille99\Documents\Alteryx Weekly Challenges\Weekly Challenge Ideas\podcasts\episodes.csv" type="V_String" />
+            <Field name="episodeUri" size="22" source="File: C:\Users\emille99\Documents\Alteryx Weekly Challenges\Weekly Challenge Ideas\podcasts\episodes.csv" type="String" />
+            <Field name="explicit" source="File: C:\Users\emille99\Documents\Alteryx Weekly Challenges\Weekly Challenge Ideas\podcasts\episodes.csv" type="Bool" />
+            <Field name="rank" source="File: C:\Users\emille99\Documents\Alteryx Weekly Challenges\Weekly Challenge Ideas\podcasts\episodes.csv" type="Double" />
+            <Field name="release_date" source="File: C:\Users\emille99\Documents\Alteryx Weekly Challenges\Weekly Challenge Ideas\podcasts\episodes.csv" type="Date" />
+            <Field name="show.copyrights" size="2" source="File: C:\Users\emille99\Documents\Alteryx Weekly Challenges\Weekly Challenge Ideas\podcasts\shows.csv" type="String" />
+            <Field name="show.description" size="2412" source="File: C:\Users\emille99\Documents\Alteryx Weekly Challenges\Weekly Challenge Ideas\podcasts\shows.csv" type="V_String" />
+            <Field name="show.explicit" source="File: C:\Users\emille99\Documents\Alteryx Weekly Challenges\Weekly Challenge Ideas\podcasts\shows.csv" type="Bool" />
+            <Field name="show.is_externally_hosted" source="File: C:\Users\emille99\Documents\Alteryx Weekly Challenges\Weekly Challenge Ideas\podcasts\shows.csv" type="Bool" />
+            <Field name="show.languages" size="9" source="File: C:\Users\emille99\Documents\Alteryx Weekly Challenges\Weekly Challenge Ideas\podcasts\shows.csv" type="String" />
+            <Field name="show.name" size="89" source="File: C:\Users\emille99\Documents\Alteryx Weekly Challenges\Weekly Challenge Ideas\podcasts\shows.csv" type="V_String" />
+            <Field name="show.publisher" size="86" source="File: C:\Users\emille99\Documents\Alteryx Weekly Challenges\Weekly Challenge Ideas\podcasts\shows.csv" type="V_String" />
+            <Field name="show.total_episodes" source="File: C:\Users\emille99\Documents\Alteryx Weekly Challenges\Weekly Challenge Ideas\podcasts\shows.csv" type="Int16" />
+            <Field name="show.type" size="4" source="File: C:\Users\emille99\Documents\Alteryx Weekly Challenges\Weekly Challenge Ideas\podcasts\shows.csv" type="String" />
+            <Field name="show.uri" size="22" source="File: C:\Users\emille99\Documents\Alteryx Weekly Challenges\Weekly Challenge Ideas\podcasts\shows.csv" type="String" />
+            <Field name="region" size="13" source="File: C:\Users\emille99\Documents\Alteryx Weekly Challenges\Weekly Challenge Ideas\podcasts\region.csv" type="String" />
+            <Field name="region code" size="2" source="File: C:\Users\emille99\Documents\Alteryx Weekly Challenges\Weekly Challenge Ideas\podcasts\region.csv" type="String" />
+            <Field name="languange" size="12" source="File: C:\Users\emille99\Documents\Alteryx Weekly Challenges\Weekly Challenge Ideas\podcasts\ISO 639-1 standard.csv" type="String" />
+            <Field name="languange code" size="3" source="File: C:\Users\emille99\Documents\Alteryx Weekly Challenges\Weekly Challenge Ideas\podcasts\ISO 639-1 standard.csv" type="String" />
+            <Field description="TextToColumns: Parsed from text" name="1" size="2147483647" source="TextToColumns: Parsed from text" type="V_String" />
+            <Field description="TextToColumns: Parsed from text" name="2" size="2147483647" source="TextToColumns: Parsed from text" type="V_String" />
+            <Field description="TextToColumns: Parsed from text" name="3" size="2147483647" source="TextToColumns: Parsed from text" type="V_String" />
+            <Field description="TextToColumns: Parsed from text" name="4" size="2147483647" source="TextToColumns: Parsed from text" type="V_String" />
+            <Field name="max_duration_ms" source="Formula: ([hours] * 60 + [minutes]) * 60 * 1000" type="Int64" />
+          </RecordInfo>
+        </MetaInfo>
+        <MetaInfo connection="False">
+          <RecordInfo>
+            <Field name="chartRankMove" size="9" source="File: C:\Users\emille99\Documents\Alteryx Weekly Challenges\Weekly Challenge Ideas\podcasts\episodes.csv" type="V_String" />
+            <Field name="date" source="File: C:\Users\emille99\Documents\Alteryx Weekly Challenges\Weekly Challenge Ideas\podcasts\episodes.csv" type="Date" />
+            <Field name="description" size="5351" source="File: C:\Users\emille99\Documents\Alteryx Weekly Challenges\Weekly Challenge Ideas\podcasts\episodes.csv" type="V_String" />
+            <Field name="duration_ms" source="File: C:\Users\emille99\Documents\Alteryx Weekly Challenges\Weekly Challenge Ideas\podcasts\episodes.csv" type="Double" />
+            <Field name="episodeName" size="228" source="File: C:\Users\emille99\Documents\Alteryx Weekly Challenges\Weekly Challenge Ideas\podcasts\episodes.csv" type="V_String" />
+            <Field name="episodeUri" size="22" source="File: C:\Users\emille99\Documents\Alteryx Weekly Challenges\Weekly Challenge Ideas\podcasts\episodes.csv" type="String" />
+            <Field name="explicit" source="File: C:\Users\emille99\Documents\Alteryx Weekly Challenges\Weekly Challenge Ideas\podcasts\episodes.csv" type="Bool" />
+            <Field name="rank" source="File: C:\Users\emille99\Documents\Alteryx Weekly Challenges\Weekly Challenge Ideas\podcasts\episodes.csv" type="Double" />
+            <Field name="release_date" source="File: C:\Users\emille99\Documents\Alteryx Weekly Challenges\Weekly Challenge Ideas\podcasts\episodes.csv" type="Date" />
+            <Field name="show.copyrights" size="2" source="File: C:\Users\emille99\Documents\Alteryx Weekly Challenges\Weekly Challenge Ideas\podcasts\shows.csv" type="String" />
+            <Field name="show.description" size="2412" source="File: C:\Users\emille99\Documents\Alteryx Weekly Challenges\Weekly Challenge Ideas\podcasts\shows.csv" type="V_String" />
+            <Field name="show.explicit" source="File: C:\Users\emille99\Documents\Alteryx Weekly Challenges\Weekly Challenge Ideas\podcasts\shows.csv" type="Bool" />
+            <Field name="show.is_externally_hosted" source="File: C:\Users\emille99\Documents\Alteryx Weekly Challenges\Weekly Challenge Ideas\podcasts\shows.csv" type="Bool" />
+            <Field name="show.languages" size="9" source="File: C:\Users\emille99\Documents\Alteryx Weekly Challenges\Weekly Challenge Ideas\podcasts\shows.csv" type="String" />
+            <Field name="show.name" size="89" source="File: C:\Users\emille99\Documents\Alteryx Weekly Challenges\Weekly Challenge Ideas\podcasts\shows.csv" type="V_String" />
+            <Field name="show.publisher" size="86" source="File: C:\Users\emille99\Documents\Alteryx Weekly Challenges\Weekly Challenge Ideas\podcasts\shows.csv" type="V_String" />
+            <Field name="show.total_episodes" source="File: C:\Users\emille99\Documents\Alteryx Weekly Challenges\Weekly Challenge Ideas\podcasts\shows.csv" type="Int16" />
+            <Field name="show.type" size="4" source="File: C:\Users\emille99\Documents\Alteryx Weekly Challenges\Weekly Challenge Ideas\podcasts\shows.csv" type="String" />
+            <Field name="show.uri" size="22" source="File: C:\Users\emille99\Documents\Alteryx Weekly Challenges\Weekly Challenge Ideas\podcasts\shows.csv" type="String" />
+            <Field name="region" size="13" source="File: C:\Users\emille99\Documents\Alteryx Weekly Challenges\Weekly Challenge Ideas\podcasts\region.csv" type="String" />
+            <Field name="region code" size="2" source="File: C:\Users\emille99\Documents\Alteryx Weekly Challenges\Weekly Challenge Ideas\podcasts\region.csv" type="String" />
+            <Field name="languange" size="12" source="File: C:\Users\emille99\Documents\Alteryx Weekly Challenges\Weekly Challenge Ideas\podcasts\ISO 639-1 standard.csv" type="String" />
+            <Field name="languange code" size="3" source="File: C:\Users\emille99\Documents\Alteryx Weekly Challenges\Weekly Challenge Ideas\podcasts\ISO 639-1 standard.csv" type="String" />
+            <Field description="TextToColumns: Parsed from text" name="1" size="2147483647" source="TextToColumns: Parsed from text" type="V_String" />
+            <Field description="TextToColumns: Parsed from text" name="2" size="2147483647" source="TextToColumns: Parsed from text" type="V_String" />
+            <Field description="TextToColumns: Parsed from text" name="3" size="2147483647" source="TextToColumns: Parsed from text" type="V_String" />
+            <Field description="TextToColumns: Parsed from text" name="4" size="2147483647" source="TextToColumns: Parsed from text" type="V_String" />
+            <Field name="max_duration_ms" source="Formula: ([hours] * 60 + [minutes]) * 60 * 1000" type="Int64" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFilter" />
+    </Node>
+    <Node ToolID="15">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.TextInput.TextInput">
+        <Position x="870" y="210" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <NumRows value="1" />
+          <Fields>
+            <Field name="text" />
+          </Fields>
+          <Data>
+            <r>
+              <c>1 hour 15 minutes</c>
+            </r>
+          </Data>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="text" size="2147483647" source="TextInput:" type="V_String" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxTextInput" />
+    </Node>
+    <Node ToolID="18">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.AppendFields.AppendFields">
+        <Position x="1182" y="198" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <CartesianMode>Error</CartesianMode>
+          <SelectConfiguration>
+            <Configuration outputConnection="Output">
+              <OrderChanged value="False" />
+              <CommaDecimal value="False" />
+              <SelectFields>
+                <SelectField field="Source_text" selected="False" input="Source_" />
+                <SelectField field="Source_minutes" selected="False" input="Source_" />
+                <SelectField field="Source_hours" selected="False" input="Source_" />
+                <SelectField field="*Unknown" selected="True" />
+              </SelectFields>
+            </Configuration>
+          </SelectConfiguration>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="chartRankMove" size="9" source="File: C:\Users\emille99\Documents\Alteryx Weekly Challenges\Weekly Challenge Ideas\podcasts\episodes.csv" type="V_String" />
+            <Field name="date" source="File: C:\Users\emille99\Documents\Alteryx Weekly Challenges\Weekly Challenge Ideas\podcasts\episodes.csv" type="Date" />
+            <Field name="description" size="5351" source="File: C:\Users\emille99\Documents\Alteryx Weekly Challenges\Weekly Challenge Ideas\podcasts\episodes.csv" type="V_String" />
+            <Field name="duration_ms" source="File: C:\Users\emille99\Documents\Alteryx Weekly Challenges\Weekly Challenge Ideas\podcasts\episodes.csv" type="Double" />
+            <Field name="episodeName" size="228" source="File: C:\Users\emille99\Documents\Alteryx Weekly Challenges\Weekly Challenge Ideas\podcasts\episodes.csv" type="V_String" />
+            <Field name="episodeUri" size="22" source="File: C:\Users\emille99\Documents\Alteryx Weekly Challenges\Weekly Challenge Ideas\podcasts\episodes.csv" type="String" />
+            <Field name="explicit" source="File: C:\Users\emille99\Documents\Alteryx Weekly Challenges\Weekly Challenge Ideas\podcasts\episodes.csv" type="Bool" />
+            <Field name="rank" source="File: C:\Users\emille99\Documents\Alteryx Weekly Challenges\Weekly Challenge Ideas\podcasts\episodes.csv" type="Double" />
+            <Field name="release_date" source="File: C:\Users\emille99\Documents\Alteryx Weekly Challenges\Weekly Challenge Ideas\podcasts\episodes.csv" type="Date" />
+            <Field name="show.copyrights" size="2" source="File: C:\Users\emille99\Documents\Alteryx Weekly Challenges\Weekly Challenge Ideas\podcasts\shows.csv" type="String" />
+            <Field name="show.description" size="2412" source="File: C:\Users\emille99\Documents\Alteryx Weekly Challenges\Weekly Challenge Ideas\podcasts\shows.csv" type="V_String" />
+            <Field name="show.explicit" source="File: C:\Users\emille99\Documents\Alteryx Weekly Challenges\Weekly Challenge Ideas\podcasts\shows.csv" type="Bool" />
+            <Field name="show.is_externally_hosted" source="File: C:\Users\emille99\Documents\Alteryx Weekly Challenges\Weekly Challenge Ideas\podcasts\shows.csv" type="Bool" />
+            <Field name="show.languages" size="9" source="File: C:\Users\emille99\Documents\Alteryx Weekly Challenges\Weekly Challenge Ideas\podcasts\shows.csv" type="String" />
+            <Field name="show.name" size="89" source="File: C:\Users\emille99\Documents\Alteryx Weekly Challenges\Weekly Challenge Ideas\podcasts\shows.csv" type="V_String" />
+            <Field name="show.publisher" size="86" source="File: C:\Users\emille99\Documents\Alteryx Weekly Challenges\Weekly Challenge Ideas\podcasts\shows.csv" type="V_String" />
+            <Field name="show.total_episodes" source="File: C:\Users\emille99\Documents\Alteryx Weekly Challenges\Weekly Challenge Ideas\podcasts\shows.csv" type="Int16" />
+            <Field name="show.type" size="4" source="File: C:\Users\emille99\Documents\Alteryx Weekly Challenges\Weekly Challenge Ideas\podcasts\shows.csv" type="String" />
+            <Field name="show.uri" size="22" source="File: C:\Users\emille99\Documents\Alteryx Weekly Challenges\Weekly Challenge Ideas\podcasts\shows.csv" type="String" />
+            <Field name="region" size="13" source="File: C:\Users\emille99\Documents\Alteryx Weekly Challenges\Weekly Challenge Ideas\podcasts\region.csv" type="String" />
+            <Field name="region code" size="2" source="File: C:\Users\emille99\Documents\Alteryx Weekly Challenges\Weekly Challenge Ideas\podcasts\region.csv" type="String" />
+            <Field name="languange" size="12" source="File: C:\Users\emille99\Documents\Alteryx Weekly Challenges\Weekly Challenge Ideas\podcasts\ISO 639-1 standard.csv" type="String" />
+            <Field name="languange code" size="3" source="File: C:\Users\emille99\Documents\Alteryx Weekly Challenges\Weekly Challenge Ideas\podcasts\ISO 639-1 standard.csv" type="String" />
+            <Field description="TextToColumns: Parsed from text" name="1" size="2147483647" source="TextToColumns: Parsed from text" type="V_String" />
+            <Field description="TextToColumns: Parsed from text" name="2" size="2147483647" source="TextToColumns: Parsed from text" type="V_String" />
+            <Field description="TextToColumns: Parsed from text" name="3" size="2147483647" source="TextToColumns: Parsed from text" type="V_String" />
+            <Field description="TextToColumns: Parsed from text" name="4" size="2147483647" source="TextToColumns: Parsed from text" type="V_String" />
+            <Field name="max_duration_ms" source="Formula: ([hours] * 60 + [minutes]) * 60 * 1000" type="Int64" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxAppendFields" />
+    </Node>
+    <Node ToolID="21">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.TextToColumns.TextToColumns">
+        <Position x="966" y="210" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Field>text</Field>
+          <ErrorHandling>Last</ErrorHandling>
+          <RootName>
+          </RootName>
+          <Delimeters value="\s" />
+          <NumFields value="4" />
+          <Mode value="Columns" />
+          <Flags value="0" />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="text" size="2147483647" source="TextInput:" type="V_String" />
+            <Field description="TextToColumns: Parsed from text" name="1" size="2147483647" source="TextToColumns: Parsed from text" type="V_String" />
+            <Field description="TextToColumns: Parsed from text" name="2" size="2147483647" source="TextToColumns: Parsed from text" type="V_String" />
+            <Field description="TextToColumns: Parsed from text" name="3" size="2147483647" source="TextToColumns: Parsed from text" type="V_String" />
+            <Field description="TextToColumns: Parsed from text" name="4" size="2147483647" source="TextToColumns: Parsed from text" type="V_String" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxTextToColumns" />
+    </Node>
+    <Node ToolID="22">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Formula.Formula">
+        <Position x="1062" y="210" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <FormulaFields>
+            <FormulaField expression="ToNumber(&#xA;  IF [2] = &quot;minutes&quot; &#xA;  THEN [1] &#xA;  ELSE [3]&#xA;  ENDIF&#xA;)" field="minutes" size="4" type="Int32" enabled="true" />
+            <FormulaField expression="ToNumber(&#xA;  IF [2] = &quot;minutes&quot; &#xA;  THEN 0&#xA;  ELSE [1]&#xA;  ENDIF&#xA;)" field="hours" size="4" type="Int32" enabled="true" />
+            <FormulaField expression="([hours] * 60 + [minutes]) * 60 * 1000" field="max_duration_ms" size="8" type="Int64" enabled="true" />
+          </FormulaFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <AnnotationText>max_duration_ms</AnnotationText>
+          <DefaultAnnotationText>minutes = ToNumber(
+  IF [2] = "minutes" 
+  THEN [1] 
+  ELSE [3]
+  ENDIF
+)
+hours...</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="text" size="2147483647" source="TextInput:" type="V_String" />
+            <Field description="TextToColumns: Parsed from text" name="1" size="2147483647" source="TextToColumns: Parsed from text" type="V_String" />
+            <Field description="TextToColumns: Parsed from text" name="2" size="2147483647" source="TextToColumns: Parsed from text" type="V_String" />
+            <Field description="TextToColumns: Parsed from text" name="3" size="2147483647" source="TextToColumns: Parsed from text" type="V_String" />
+            <Field description="TextToColumns: Parsed from text" name="4" size="2147483647" source="TextToColumns: Parsed from text" type="V_String" />
+            <Field name="minutes" source="Formula: ToNumber(&#xA;  IF [2] = &quot;minutes&quot; &#xA;  THEN [1] &#xA;  ELSE [3]&#xA;  ENDIF&#xA;)" type="Int32" />
+            <Field name="hours" source="Formula: ToNumber(&#xA;  IF [2] = &quot;minutes&quot; &#xA;  THEN 0&#xA;  ELSE [1]&#xA;  ENDIF&#xA;)" type="Int32" />
+            <Field name="max_duration_ms" source="Formula: ([hours] * 60 + [minutes]) * 60 * 1000" type="Int64" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFormula" />
+    </Node>
+    <Node ToolID="9">
+      <GuiSettings Plugin="AlteryxGuiToolkit.Questions.Label.Label">
+        <Position x="0" y="0" width="59" height="59" />
+      </GuiSettings>
+      <Properties>
+        <Configuration />
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+    </Node>
+    <Node ToolID="10">
+      <GuiSettings Plugin="AlteryxGuiToolkit.Questions.LabelGroup.LabelGroup">
+        <Position x="0" y="0" width="59" height="59" />
+      </GuiSettings>
+      <Properties>
+        <Configuration />
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+    </Node>
+    <Node ToolID="11">
+      <GuiSettings Plugin="AlteryxGuiToolkit.Questions.DropDownListBox.DropDown">
+        <Position x="870" y="54" width="59" height="59" />
+      </GuiSettings>
+      <Properties>
+        <Configuration />
+        <Annotation DisplayMode="0">
+          <Name />
+          <AnnotationText>Drop Down (11)</AnnotationText>
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+    </Node>
+    <Node ToolID="16">
+      <GuiSettings Plugin="AlteryxGuiToolkit.Action.Action">
+        <Position x="870" y="132" width="59" height="59" />
+      </GuiSettings>
+      <Properties>
+        <Configuration />
+        <Annotation DisplayMode="0">
+          <Name />
+          <AnnotationText>Update Value</AnnotationText>
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+    </Node>
+    <Node ToolID="19">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.BrowseV2.BrowseV2">
+        <Position x="1362" y="186" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <TempFile>C:\Users\yoshi\AppData\Local\Temp\Alteryx\Engine_29200_bf9b448bce1c482aad0cb6c2befcfa51_\Engine_29200_e9814a38ab7f41ea9eab5c51da49d990~.yxdb</TempFile>
+          <TempFileDataProfiling />
+          <Layout>
+            <ViewMode>Single</ViewMode>
+            <ViewSize value="100" />
+            <View1>
+              <DefaultTab>Profile</DefaultTab>
+              <Hints>
+                <Table />
+              </Hints>
+            </View1>
+            <View2 />
+          </Layout>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxBrowseV2" />
+    </Node>
+    <Node ToolID="24">
+      <GuiSettings Plugin="AlteryxGuiToolkit.ToolContainer.ToolContainer">
+        <Position x="17" y="29" width="302" height="386" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Caption>About</Caption>
+          <Style TextColor="#314c4a" FillColor="#ecf2f2" BorderColor="#314c4a" Transparency="25" Margin="25" />
+          <Disabled value="False" />
+          <Folded value="False" />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <AnnotationText>About</AnnotationText>
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <ChildNodes>
+        <Node ToolID="23">
+          <GuiSettings Plugin="AlteryxGuiToolkit.TextBox.TextBox">
+            <Position x="42" y="78" width="252" height="312" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <Text>Summary
+  Weekly Challenge 500 app3
+  Display a drop down list of the max duration
+  Filter the input data with the selected duration
+
+Input Data
+  ..\local_output\C500_app2_output.yxdb
+
+Output Data
+  Browse Tool
+
+Process
+  Step1: Create a list of durations
+  Step2: Create a drop down list from the columns
+  Step3: Convert the duration to milliseconds
+  Step4: Append the duration to input data
+  Step5: Filter with the duration
+  Step6: Output to Browse Tool
+
+Created by Yoshiro Fujimori
+Last update 2026-02-22</Text>
+              <Font name="Arial" size="8.25" style="0" />
+              <TextColor name="Black" />
+              <FillColor name="White" />
+              <Shape shape="0" />
+              <Justification Justification="3" />
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+        </Node>
+      </ChildNodes>
+    </Node>
+    <Node ToolID="2">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.DbFileInput.DbFileInput">
+        <Position x="330" y="282" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Passwords />
+          <File OutputFileName="" FileFormat="19" SearchSubDirs="False" RecordLimit="">..\local_output\C500_app2_output.yxdb</File>
+          <FormatSpecificOptions />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>C500_app2_output.yxdb</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+        <Dependencies>
+          <Implicit />
+        </Dependencies>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxDbFileInput" />
+    </Node>
+    <Node ToolID="25">
+      <GuiSettings Plugin="AlteryxGuiToolkit.ToolContainer.ToolContainer">
+        <Position x="401" y="77" width="444" height="249" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Caption>Step1: Create a list of durations</Caption>
+          <Style TextColor="#314c4a" FillColor="#ecf2f2" BorderColor="#314c4a" Transparency="25" Margin="25" />
+          <Disabled value="False" />
+          <Folded value="False" />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <AnnotationText>Step1: Create a list of durations</AnnotationText>
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <ChildNodes>
+        <Node ToolID="3">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.AlteryxSelect.AlteryxSelect">
+            <Position x="426" y="126" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <OrderChanged value="False" />
+              <CommaDecimal value="False" />
+              <SelectFields>
+                <SelectField field="duration_ms" selected="True" />
+                <SelectField field="*Unknown" selected="False" />
+              </SelectFields>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+            <MetaInfo connection="Output">
+              <RecordInfo>
+                <Field name="duration_ms" source="File: C:\Users\emille99\Documents\Alteryx Weekly Challenges\Weekly Challenge Ideas\podcasts\episodes.csv" type="Double" />
+              </RecordInfo>
+            </MetaInfo>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxSelect" />
+        </Node>
+        <Node ToolID="5">
+          <GuiSettings Plugin="AlteryxSpatialPluginsGui.Summarize.Summarize">
+            <Position x="522" y="126" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <SummarizeFields>
+                <SummarizeField field="duration_ms" action="Max" rename="Max_duration_ms" />
+              </SummarizeFields>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+            <MetaInfo connection="Output">
+              <RecordInfo>
+                <Field name="Max_duration_ms" source="File: C:\Users\emille99\Documents\Alteryx Weekly Challenges\Weekly Challenge Ideas\podcasts\episodes.csv" type="Double" />
+              </RecordInfo>
+            </MetaInfo>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxSpatialPluginsEngine.dll" EngineDllEntryPoint="AlteryxSummarize" />
+        </Node>
+        <Node ToolID="6">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.Formula.Formula">
+            <Position x="618" y="126" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <FormulaFields>
+                <FormulaField expression="CEIL([Max_duration_ms] / 1000 / 60 / 15)" field="15minutes" size="4" type="Int32" enabled="true" />
+              </FormulaFields>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <AnnotationText># of 15minutes</AnnotationText>
+              <DefaultAnnotationText><![CDATA[15minutes = CEIL([Max_duration_ms] / 1000 / 60 / 15)
+]]></DefaultAnnotationText>
+              <Left value="False" />
+            </Annotation>
+            <MetaInfo connection="Output">
+              <RecordInfo>
+                <Field name="Max_duration_ms" source="File: C:\Users\emille99\Documents\Alteryx Weekly Challenges\Weekly Challenge Ideas\podcasts\episodes.csv" type="Double" />
+                <Field name="15minutes" source="Formula: CEIL([Max_duration_ms] / 1000 / 60 / 15)" type="Int32" />
+              </RecordInfo>
+            </MetaInfo>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFormula" />
+        </Node>
+        <Node ToolID="7">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.GenerateRows.GenerateRows">
+            <Position x="726" y="126" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <UpdateField value="False" />
+              <UpdateField_Name />
+              <CreateField_Name>RowCount</CreateField_Name>
+              <CreateField_Type>Int32</CreateField_Type>
+              <CreateField_Size>4</CreateField_Size>
+              <Expression_Init>1</Expression_Init>
+              <Expression_Cond>RowCount &lt;= [15minutes]</Expression_Cond>
+              <Expression_Loop>RowCount + 1</Expression_Loop>
+              <Expression>1RowCount &lt;= [15minutes]RowCount + 1</Expression>
+              <RecordCount value="23" />
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+            <MetaInfo connection="Output">
+              <RecordInfo>
+                <Field name="Max_duration_ms" source="File: C:\Users\emille99\Documents\Alteryx Weekly Challenges\Weekly Challenge Ideas\podcasts\episodes.csv" type="Double" />
+                <Field name="15minutes" source="Formula: CEIL([Max_duration_ms] / 1000 / 60 / 15)" type="Int32" />
+                <Field name="RowCount" source="GenerateRows" type="Int32" />
+              </RecordInfo>
+            </MetaInfo>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxGenerateRows" />
+        </Node>
+        <Node ToolID="8">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.Formula.Formula">
+            <Position x="522" y="210" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <FormulaFields>
+                <FormulaField expression="IF FLOOR([RowCount] / 4) = 0 &#xA;THEN &quot;&quot;&#xA;ELSEIF FLOOR([RowCount] / 4) = 1&#xA;THEN &quot;1 hour &quot;&#xA;ELSE ToString(FLOOR([RowCount] / 4)) + &quot; hours &quot;&#xA;ENDIF" field="hour" size="1073741823" type="V_WString" enabled="true" />
+                <FormulaField expression="IF Mod([RowCount], 4) = 0 &#xA;THEN &quot;&quot;&#xA;ELSE ToString(Mod([RowCount], 4) * 15) + &quot; minutes&quot;&#xA;ENDIF" field="minutes" size="2147483647" type="V_String" enabled="true" />
+                <FormulaField expression="Trim([hour] + [minutes], &quot; &quot;)" field="dropdown" size="1073741823" type="V_WString" enabled="true" />
+              </FormulaFields>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <AnnotationText>drop down list</AnnotationText>
+              <DefaultAnnotationText>hour = IF FLOOR([RowCount] / 4) = 0 
+THEN ""
+ELSEIF FLOOR([RowCount] / 4) = 1
+TH...</DefaultAnnotationText>
+              <Left value="False" />
+            </Annotation>
+            <MetaInfo connection="Output">
+              <RecordInfo>
+                <Field name="Max_duration_ms" source="File: C:\Users\emille99\Documents\Alteryx Weekly Challenges\Weekly Challenge Ideas\podcasts\episodes.csv" type="Double" />
+                <Field name="15minutes" source="Formula: CEIL([Max_duration_ms] / 1000 / 60 / 15)" type="Int32" />
+                <Field name="RowCount" source="GenerateRows" type="Int32" />
+                <Field name="hour" size="1073741823" source="Formula: IF FLOOR([RowCount] / 4) = 0 &#xA;THEN &quot;&quot;&#xA;ELSEIF FLOOR([RowCount] / 4) = 1&#xA;THEN &quot;1 hour &quot;&#xA;ELSE ToString(FLOOR([RowCount] / 4)) + &quot; hours &quot;&#xA;ENDIF" type="V_WString" />
+                <Field name="minutes" size="2147483647" source="Formula: IF Mod([RowCount], 4) = 0 &#xA;THEN &quot;&quot;&#xA;ELSE ToString(Mod([RowCount], 4) * 15) + &quot; minutes&quot;&#xA;ENDIF" type="V_String" />
+                <Field name="dropdown" size="1073741823" source="Formula: Trim([hour] + [minutes], &quot; &quot;)" type="V_WString" />
+              </RecordInfo>
+            </MetaInfo>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFormula" />
+        </Node>
+        <Node ToolID="12">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.CrossTab.CrossTab">
+            <Position x="618" y="210" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <GroupFields />
+              <HeaderField field="dropdown" />
+              <DataField field="RowCount" />
+              <Methods>
+                <Method method="Sum" />
+              </Methods>
+              <RetainSpecChars value="True" />
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+            <MetaInfo connection="Output">
+              <RecordInfo>
+                <Field name="1 hour" source="CrossTab:Header:dropdown:1 hour:Sum:" type="Int64" />
+                <Field name="1 hour 15 minutes" source="CrossTab:Header:dropdown:1 hour 15 minutes:Sum:" type="Int64" />
+                <Field name="1 hour 30 minutes" source="CrossTab:Header:dropdown:1 hour 30 minutes:Sum:" type="Int64" />
+                <Field name="1 hour 45 minutes" source="CrossTab:Header:dropdown:1 hour 45 minutes:Sum:" type="Int64" />
+                <Field name="2 hours" source="CrossTab:Header:dropdown:2 hours:Sum:" type="Int64" />
+                <Field name="2 hours 15 minutes" source="CrossTab:Header:dropdown:2 hours 15 minutes:Sum:" type="Int64" />
+                <Field name="2 hours 30 minutes" source="CrossTab:Header:dropdown:2 hours 30 minutes:Sum:" type="Int64" />
+                <Field name="2 hours 45 minutes" source="CrossTab:Header:dropdown:2 hours 45 minutes:Sum:" type="Int64" />
+                <Field name="3 hours" source="CrossTab:Header:dropdown:3 hours:Sum:" type="Int64" />
+                <Field name="3 hours 15 minutes" source="CrossTab:Header:dropdown:3 hours 15 minutes:Sum:" type="Int64" />
+                <Field name="3 hours 30 minutes" source="CrossTab:Header:dropdown:3 hours 30 minutes:Sum:" type="Int64" />
+                <Field name="3 hours 45 minutes" source="CrossTab:Header:dropdown:3 hours 45 minutes:Sum:" type="Int64" />
+                <Field name="4 hours" source="CrossTab:Header:dropdown:4 hours:Sum:" type="Int64" />
+                <Field name="4 hours 15 minutes" source="CrossTab:Header:dropdown:4 hours 15 minutes:Sum:" type="Int64" />
+                <Field name="4 hours 30 minutes" source="CrossTab:Header:dropdown:4 hours 30 minutes:Sum:" type="Int64" />
+                <Field name="4 hours 45 minutes" source="CrossTab:Header:dropdown:4 hours 45 minutes:Sum:" type="Int64" />
+                <Field name="5 hours" source="CrossTab:Header:dropdown:5 hours:Sum:" type="Int64" />
+                <Field name="5 hours 15 minutes" source="CrossTab:Header:dropdown:5 hours 15 minutes:Sum:" type="Int64" />
+                <Field name="5 hours 30 minutes" source="CrossTab:Header:dropdown:5 hours 30 minutes:Sum:" type="Int64" />
+                <Field name="5 hours 45 minutes" source="CrossTab:Header:dropdown:5 hours 45 minutes:Sum:" type="Int64" />
+                <Field name="15 minutes" source="CrossTab:Header:dropdown:15 minutes:Sum:" type="Int64" />
+                <Field name="30 minutes" source="CrossTab:Header:dropdown:30 minutes:Sum:" type="Int64" />
+                <Field name="45 minutes" source="CrossTab:Header:dropdown:45 minutes:Sum:" type="Int64" />
+              </RecordInfo>
+            </MetaInfo>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxCrossTab" />
+        </Node>
+        <Node ToolID="13">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.AlteryxSelect.AlteryxSelect">
+            <Position x="726" y="210" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <OrderChanged value="True" />
+              <CommaDecimal value="False" />
+              <SelectFields>
+                <SelectField field="15 minutes" selected="True" />
+                <SelectField field="30 minutes" selected="True" />
+                <SelectField field="45 minutes" selected="True" />
+                <SelectField field="1 hour" selected="True" />
+                <SelectField field="1 hour 15 minutes" selected="True" />
+                <SelectField field="1 hour 30 minutes" selected="True" />
+                <SelectField field="1 hour 45 minutes" selected="True" />
+                <SelectField field="2 hours" selected="True" />
+                <SelectField field="2 hours 15 minutes" selected="True" />
+                <SelectField field="2 hours 30 minutes" selected="True" />
+                <SelectField field="2 hours 45 minutes" selected="True" />
+                <SelectField field="3 hours" selected="True" />
+                <SelectField field="3 hours 15 minutes" selected="True" />
+                <SelectField field="3 hours 30 minutes" selected="True" />
+                <SelectField field="3 hours 45 minutes" selected="True" />
+                <SelectField field="4 hours" selected="True" />
+                <SelectField field="4 hours 15 minutes" selected="True" />
+                <SelectField field="4 hours 30 minutes" selected="True" />
+                <SelectField field="4 hours 45 minutes" selected="True" />
+                <SelectField field="5 hours" selected="True" />
+                <SelectField field="5 hours 15 minutes" selected="True" />
+                <SelectField field="5 hours 30 minutes" selected="True" />
+                <SelectField field="5 hours 45 minutes" selected="True" />
+                <SelectField field="*Unknown" selected="True" />
+              </SelectFields>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <AnnotationText>arrange column order</AnnotationText>
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+            <MetaInfo connection="Output">
+              <RecordInfo>
+                <Field name="15 minutes" source="CrossTab:Header:dropdown:15 minutes:Sum:" type="Int64" />
+                <Field name="30 minutes" source="CrossTab:Header:dropdown:30 minutes:Sum:" type="Int64" />
+                <Field name="45 minutes" source="CrossTab:Header:dropdown:45 minutes:Sum:" type="Int64" />
+                <Field name="1 hour" source="CrossTab:Header:dropdown:1 hour:Sum:" type="Int64" />
+                <Field name="1 hour 15 minutes" source="CrossTab:Header:dropdown:1 hour 15 minutes:Sum:" type="Int64" />
+                <Field name="1 hour 30 minutes" source="CrossTab:Header:dropdown:1 hour 30 minutes:Sum:" type="Int64" />
+                <Field name="1 hour 45 minutes" source="CrossTab:Header:dropdown:1 hour 45 minutes:Sum:" type="Int64" />
+                <Field name="2 hours" source="CrossTab:Header:dropdown:2 hours:Sum:" type="Int64" />
+                <Field name="2 hours 15 minutes" source="CrossTab:Header:dropdown:2 hours 15 minutes:Sum:" type="Int64" />
+                <Field name="2 hours 30 minutes" source="CrossTab:Header:dropdown:2 hours 30 minutes:Sum:" type="Int64" />
+                <Field name="2 hours 45 minutes" source="CrossTab:Header:dropdown:2 hours 45 minutes:Sum:" type="Int64" />
+                <Field name="3 hours" source="CrossTab:Header:dropdown:3 hours:Sum:" type="Int64" />
+                <Field name="3 hours 15 minutes" source="CrossTab:Header:dropdown:3 hours 15 minutes:Sum:" type="Int64" />
+                <Field name="3 hours 30 minutes" source="CrossTab:Header:dropdown:3 hours 30 minutes:Sum:" type="Int64" />
+                <Field name="3 hours 45 minutes" source="CrossTab:Header:dropdown:3 hours 45 minutes:Sum:" type="Int64" />
+                <Field name="4 hours" source="CrossTab:Header:dropdown:4 hours:Sum:" type="Int64" />
+                <Field name="4 hours 15 minutes" source="CrossTab:Header:dropdown:4 hours 15 minutes:Sum:" type="Int64" />
+                <Field name="4 hours 30 minutes" source="CrossTab:Header:dropdown:4 hours 30 minutes:Sum:" type="Int64" />
+                <Field name="4 hours 45 minutes" source="CrossTab:Header:dropdown:4 hours 45 minutes:Sum:" type="Int64" />
+                <Field name="5 hours" source="CrossTab:Header:dropdown:5 hours:Sum:" type="Int64" />
+                <Field name="5 hours 15 minutes" source="CrossTab:Header:dropdown:5 hours 15 minutes:Sum:" type="Int64" />
+                <Field name="5 hours 30 minutes" source="CrossTab:Header:dropdown:5 hours 30 minutes:Sum:" type="Int64" />
+                <Field name="5 hours 45 minutes" source="CrossTab:Header:dropdown:5 hours 45 minutes:Sum:" type="Int64" />
+              </RecordInfo>
+            </MetaInfo>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxSelect" />
+        </Node>
+      </ChildNodes>
+    </Node>
+  </Nodes>
+  <Connections>
+    <Connection>
+      <Origin ToolID="14" Connection="True" />
+      <Destination ToolID="19" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="15" Connection="Output" />
+      <Destination ToolID="21" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="18" Connection="Output" />
+      <Destination ToolID="14" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="21" Connection="Output" />
+      <Destination ToolID="22" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="22" Connection="Output" />
+      <Destination ToolID="18" Connection="Source" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="2" Connection="Output" />
+      <Destination ToolID="18" Connection="Targets" />
+    </Connection>
+    <Connection name="#1">
+      <Origin ToolID="11" Connection="Question" />
+      <Destination ToolID="16" Connection="Question" />
+    </Connection>
+    <Connection name="#2">
+      <Origin ToolID="16" Connection="Action" />
+      <Destination ToolID="15" Connection="Action" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="2" Connection="Output" />
+      <Destination ToolID="3" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="3" Connection="Output" />
+      <Destination ToolID="5" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="5" Connection="Output" />
+      <Destination ToolID="6" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="6" Connection="Output" />
+      <Destination ToolID="7" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="7" Connection="Output" />
+      <Destination ToolID="8" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="8" Connection="Output" />
+      <Destination ToolID="12" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="12" Connection="Output" />
+      <Destination ToolID="13" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="13" Connection="Output" />
+      <Destination ToolID="11" Connection="Question Input" />
+    </Connection>
+  </Connections>
+  <Properties>
+    <Memory default="True" />
+    <GlobalRecordLimit value="0" />
+    <TempFiles default="True" />
+    <Annotation on="True" includeToolName="False" />
+    <ConvErrorLimit value="10" />
+    <ConvErrorLimit_Stop value="False" />
+    <CancelOnError value="False" />
+    <DisableBrowse value="False" />
+    <EnablePerformanceProfiling value="False" />
+    <RunWithE2 value="True" />
+    <DefaultTZ value="Local" />
+    <SortedGrouping value="True" />
+    <PredictiveToolsCodePage value="1252" />
+    <DisableAllOutput value="False" />
+    <ShowAllMacroMessages value="False" />
+    <ShowConnectionStatusIsOn value="True" />
+    <ShowConnectionStatusOnlyWhenRunning value="True" />
+    <ZoomLevel value="0" />
+    <LayoutType>Horizontal</LayoutType>
+    <IsTemplate value="False" />
+    <Constants>
+      <Constant>
+        <Namespace>Question</Namespace>
+        <Name>Drop Down (11)</Name>
+        <Value />
+        <IsNumeric value="False" />
+      </Constant>
+    </Constants>
+    <MetaInfo>
+      <NameIsFileName value="True" />
+      <Name>C500_app3</Name>
+      <Description />
+      <RootToolName />
+      <ToolVersion />
+      <ToolInDb value="False" />
+      <CategoryName />
+      <SearchTags />
+      <Author />
+      <Company />
+      <Copyright />
+      <DescriptionLink actual="" displayed="" />
+      <Example>
+        <Description />
+        <File />
+      </Example>
+      <WorkflowId value="3583b725-34fc-4e03-aa50-070e4f2fa74f" />
+      <Telemetry>
+        <PreviousWorkflowId value="" />
+        <OriginWorkflowId value="3583b725-34fc-4e03-aa50-070e4f2fa74f" />
+      </Telemetry>
+      <PlatformWorkflowId value="" />
+    </MetaInfo>
+    <Events>
+      <Enabled value="True" />
+    </Events>
+    <RuntimeProperties>
+      <Actions>
+        <NoCondition>
+          <Type>NoCondition</Type>
+          <Description>(Always Run)</Description>
+          <True>
+            <Action>
+              <Type>Dynamic</Type>
+              <Description />
+              <ToolId value="16" />
+              <Expression>{{INPUT}}</Expression>
+              <Destination>15/Data/r[1]/c[1]</Destination>
+              <Mapping>Update Cell</Mapping>
+              <Mode>Expression</Mode>
+              <DynamicConfiguration>row	1
+column	1</DynamicConfiguration>
+              <DefaultConfiguration value="True" />
+            </Action>
+          </True>
+        </NoCondition>
+      </Actions>
+      <Questions>
+        <Question>
+          <Type>Tab</Type>
+          <Description>Questions</Description>
+          <Name>Tab (1)</Name>
+          <ToolId value="1" />
+          <Questions>
+            <Question>
+              <Type>LabelGroup</Type>
+              <Description>Let's Find Your Next Podcast!</Description>
+              <Name>LabelGroup (10)</Name>
+              <ToolId value="10" />
+              <Questions>
+                <Question>
+                  <Type>Label</Type>
+                  <Description>Lastly, select the maximum podcast length:</Description>
+                  <Name>Label (9)</Name>
+                  <ToolId value="9" />
+                </Question>
+              </Questions>
+            </Question>
+            <Question>
+              <Type>ListBox</Type>
+              <Description>Drop Down (11)</Description>
+              <Name>Drop Down (11)</Name>
+              <ToolId value="11" />
+              <Multiple value="False" />
+              <Default />
+              <Mode>Field</Mode>
+              <Field_ToolId value="13" />
+              <Field_ConnectionName />
+              <Field_Connection>Output</Field_Connection>
+              <Field_IsOutput value="True" />
+              <Field_IncludeNone value="False" />
+              <Field_FilterTypes>Bool,Byte,Int16,Int32,Int64,FixedDecimal,Float,Double,String,WString,V_String,V_WString,Date,Time,DateTime,Blob,SpatialObj</Field_FilterTypes>
+            </Question>
+          </Questions>
+        </Question>
+      </Questions>
+      <ModuleType>Wizard</ModuleType>
+      <MacroCustomHelp value="False" />
+      <MacroDynamicOutputFields value="False" />
+      <MacroImageStd value="39" />
+      <MacroInputs />
+      <MacroOutputs />
+      <Wiz_CustomHelp value="False" />
+      <Wiz_CustomGraphic value="False" />
+      <Wiz_ShowOutput value="True" />
+      <Wiz_OpenOutputTools>
+        <Tool ToolId="19" Selected="True" />
+      </Wiz_OpenOutputTools>
+      <Wiz_OutputMessage />
+      <Wiz_NoOutputFilesMessage />
+      <Wiz_ChainRunWizard />
+    </RuntimeProperties>
+  </Properties>
+</AlteryxDocument>
