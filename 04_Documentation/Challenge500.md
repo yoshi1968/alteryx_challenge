@@ -15,12 +15,13 @@
 ![App1](C500-app1.png)
 
 ### Main Process
+```
 - Input Data
   - Read ..\local_input\podcasts.yxdb
 - Summarize
   - Group by [region]
 - Formula
-  - [value](V-WString) = Null()
+  - [value] (V-WString) = Null()
 - Cross Tab
   - Change Column Header : [region]
   - Values for New Columns : [value]
@@ -32,6 +33,7 @@
   - [region] = "Japan"
 - Output Data
   - ..\local_output\C500_app1_output.yxdb
+```
 
 ### Interface Designer
 - On Success - Run Another Analytic App : True
@@ -48,12 +50,13 @@
 ![App2](C500-app2.png)
 
 ### Main Process
+```
 - Input Data
   - ..\local_output\C500_app1_output.yxdb
 - Summarize
   - Group by [language]
 - Formula
-  - [value](V-WString) = Null()
+  - [value] (V-WString) = Null()
 - Cross Tab
   - Change Column Header : [language]
   - Values for New Columns : [value]
@@ -69,6 +72,7 @@
   - [language] IN ("Japanese")
 - Output Data
   - ..\local_output\C500_app2_output.yxdb
+```
 
 ### Interface Designer
 - On Success - Run Another Analytic App : True
@@ -86,10 +90,38 @@
 
 ### Main Process
 ```
-```
+- Input Data
+  - ..\local_output\C500_app2_output.yxdb
 
-### Tool Configurations
-```
+- Summarize
+  - [Max_duration_ms]
+- Formula
+  - [15minutes] (Int32) = CEIL([Max_duration_ms] / 1000 / 60 / 15)
+- Generate Rows
+  - Create New Field : [RowCount] (Int32)
+  - Initialization Expression = 1
+  - Condition Expression = RowCount <= [15minutes]
+  - Loop Expression = RowCount + 1
+- Formula
+  - [hour] (V_WString) = 
+      IF FLOOR([RowCount] / 4) = 0 
+      THEN ""
+      ELSEIF FLOOR([RowCount] / 4) = 1
+      THEN "1 hour "
+      ELSE ToString(FLOOR([RowCount] / 4)) + " hours "
+      ENDIF
+  - [minutes] (V_WString) =
+      IF Mod([RowCount], 4) = 0 
+      THEN ""
+      ELSE ToString(Mod([RowCount], 4) * 15) + " minutes"
+      ENDIF
+  - [dropdown] (V_WString) = Trim([hour] + [minutes], " ")
+- Cross Tab
+  - Change Column Header : [dropdown]
+  - Values for New Columns : [RowCount]
+  - Retain Special Characters in New Column Names (new!) : True
+  - Method for Aggregating Values : Sum
+
 ```
 
 ## Last Update
