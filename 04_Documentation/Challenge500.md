@@ -15,8 +15,21 @@
 ![App1](C500-app1.png)
 
 ### Main Process
-
-### Tool Configurations
+- Input Data
+  - Read ..\local_input\podcasts.yxdb
+- Summarize
+  - Group by [region]
+- Formula
+  - [value](V-WString) = Null()
+- Cross Tab
+  - Change Column Header : [region]
+  - Values for New Columns : [value]
+  - Retain Special Characters in New Column Names (new!) : True
+  - Method for Aggregating Values : First
+- Action
+  - Update Value / Expression Value / Replace a specific string : 'Japan'
+- Filter
+  - [region] = "Japan"
 
 ## App2
 
