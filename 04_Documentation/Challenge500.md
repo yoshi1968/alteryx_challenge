@@ -30,6 +30,12 @@
   - Update Value / Expression Value / Replace a specific string : 'Japan'
 - Filter
   - [region] = "Japan"
+- Output Data
+  - ..\local_output\C500_app1_output.yxdb
+
+### Interface Designer
+- On Success - Run Another Analytic App : True
+  - C500_app2.yxwz
 
 ## App2
 
@@ -42,8 +48,31 @@
 ![App2](C500-app2.png)
 
 ### Main Process
+- Input Data
+  - ..\local_output\C500_app1_output.yxdb
+- Summarize
+  - Group by [language]
+- Formula
+  - [value](V-WString) = Null()
+- Cross Tab
+  - Change Column Header : [language]
+  - Values for New Columns : [value]
+  - Method for Aggregating Values : First
+- List Box
+  - Generate Custom List : 
+    - Start Text : "
+    - Separator : ","
+    - End Text : "
+- Action
+  - Update Value / Expression Value / Replace a specific string : "Japanese"
+- Filter
+  - [language] IN ("Japanese")
+- Output Data
+  - ..\local_output\C500_app2_output.yxdb
 
-### Tool Configurations
+### Interface Designer
+- On Success - Run Another Analytic App : True
+  - C500_app3.yxwz
 
 ## App3
 
