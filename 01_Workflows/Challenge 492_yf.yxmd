@@ -1,0 +1,1156 @@
+<?xml version="1.0"?>
+<AlteryxDocument yxmdVer="2025.2" RunE2="T">
+  <Nodes>
+    <Node ToolID="21">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.DbFileInput.DbFileInput">
+        <Position x="474" y="90" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Passwords />
+          <File OutputFileName="" RecordLimit="" SearchSubDirs="False" FileFormat="0">..\Local_input\Independent_Medical_Reviews.csv</File>
+          <FormatSpecificOptions>
+            <CodePage>28591</CodePage>
+            <Delimeter>,</Delimeter>
+            <IgnoreErrors>False</IgnoreErrors>
+            <FieldLen>25400</FieldLen>
+            <AllowShareWrite>False</AllowShareWrite>
+            <HeaderRow>True</HeaderRow>
+            <IgnoreQuotes>DoubleQuotes</IgnoreQuotes>
+            <ImportLine>1</ImportLine>
+          </FormatSpecificOptions>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>Independent_Medical_Reviews.csv</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+        <Dependencies>
+          <Implicit />
+        </Dependencies>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="Reference ID" size="25400" source="File: C:\Users\yoshi\OneDrive\デスクトップ\alteryx_challenge\Local_input\Independent_Medical_Reviews.csv" type="V_String" />
+            <Field name="Report Year" size="25400" source="File: C:\Users\yoshi\OneDrive\デスクトップ\alteryx_challenge\Local_input\Independent_Medical_Reviews.csv" type="V_String" />
+            <Field name="Diagnosis Category" size="25400" source="File: C:\Users\yoshi\OneDrive\デスクトップ\alteryx_challenge\Local_input\Independent_Medical_Reviews.csv" type="V_String" />
+            <Field name="Diagnosis Sub Category" size="25400" source="File: C:\Users\yoshi\OneDrive\デスクトップ\alteryx_challenge\Local_input\Independent_Medical_Reviews.csv" type="V_String" />
+            <Field name="Treatment Category" size="25400" source="File: C:\Users\yoshi\OneDrive\デスクトップ\alteryx_challenge\Local_input\Independent_Medical_Reviews.csv" type="V_String" />
+            <Field name="Treatment Sub Category" size="25400" source="File: C:\Users\yoshi\OneDrive\デスクトップ\alteryx_challenge\Local_input\Independent_Medical_Reviews.csv" type="V_String" />
+            <Field name="Determination" size="25400" source="File: C:\Users\yoshi\OneDrive\デスクトップ\alteryx_challenge\Local_input\Independent_Medical_Reviews.csv" type="V_String" />
+            <Field name="Type" size="25400" source="File: C:\Users\yoshi\OneDrive\デスクトップ\alteryx_challenge\Local_input\Independent_Medical_Reviews.csv" type="V_String" />
+            <Field name="Age Range" size="25400" source="File: C:\Users\yoshi\OneDrive\デスクトップ\alteryx_challenge\Local_input\Independent_Medical_Reviews.csv" type="V_String" />
+            <Field name="Patient Gender" size="25400" source="File: C:\Users\yoshi\OneDrive\デスクトップ\alteryx_challenge\Local_input\Independent_Medical_Reviews.csv" type="V_String" />
+            <Field name="Findings" size="25400" source="File: C:\Users\yoshi\OneDrive\デスクトップ\alteryx_challenge\Local_input\Independent_Medical_Reviews.csv" type="V_String" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxDbFileInput" />
+    </Node>
+    <Node ToolID="22">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.BrowseV2.BrowseV2">
+        <Position x="582" y="18" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <TempFile>C:\Users\yoshi\AppData\Local\Temp\Alteryx\Engine_12332_76fe8053871342ac81ddd55715cac4bc_\Engine_12332_d49801d7f3e84bfd8ccf9084c423497a~.yxdb</TempFile>
+          <TempFileDataProfiling />
+          <Layout>
+            <ViewMode>Single</ViewMode>
+            <ViewSize value="100" />
+            <View1>
+              <DefaultTab>Profile</DefaultTab>
+              <Hints>
+                <Table />
+              </Hints>
+            </View1>
+            <View2 />
+          </Layout>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxBrowseV2" />
+    </Node>
+    <Node ToolID="59">
+      <GuiSettings Plugin="AlteryxSpatialPluginsGui.Summarize.Summarize">
+        <Position x="582" y="90" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <SummarizeFields>
+            <SummarizeField field="Diagnosis Category" action="GroupBy" rename="Diagnosis Category" />
+            <SummarizeField field="Determination" action="GroupBy" rename="Determination" />
+            <SummarizeField field="Reference ID" action="Count" rename="Count" />
+          </SummarizeFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxSpatialPluginsEngine.dll" EngineDllEntryPoint="AlteryxSummarize" />
+    </Node>
+    <Node ToolID="60">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.CrossTab.CrossTab">
+        <Position x="678" y="90" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <GroupFields>
+            <Field field="Diagnosis Category" />
+          </GroupFields>
+          <HeaderField field="Determination" />
+          <DataField field="Count" />
+          <Methods>
+            <Method method="XRow" />
+            <Method method="TotRow" />
+          </Methods>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="Diagnosis Category" size="25400" source="CrossTab:Group:XRow:" type="V_String" />
+            <Field name="XRow_Overturned_Decision_of_Health_Plan" source="CrossTab:Header:Determination:Overturned Decision of Health Plan:XRow:" type="Double" />
+            <Field name="XRow_Upheld_Decision_of_Health_Plan" source="CrossTab:Header:Determination:Upheld Decision of Health Plan:XRow:" type="Double" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxCrossTab" />
+    </Node>
+    <Node ToolID="63">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.AlteryxSelect.AlteryxSelect">
+        <Position x="870" y="90" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <OrderChanged value="False" />
+          <CommaDecimal value="False" />
+          <SelectFields>
+            <SelectField field="XRow_Overturned_Decision_of_Health_Plan" selected="True" rename="Per_Overturned" />
+            <SelectField field="XRow_Upheld_Decision_of_Health_Plan" selected="True" rename="Per_Upheld" />
+            <SelectField field="*Unknown" selected="True" />
+          </SelectFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxSelect" />
+    </Node>
+    <Node ToolID="64">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.MultiFieldFormula.MultiFieldFormula">
+        <Position x="966" y="90" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <FieldType>Numeric</FieldType>
+          <Fields orderChanged="False">
+            <Field name="Per_Overturned" />
+            <Field name="Per_Upheld" />
+            <Field name="*Unknown" />
+          </Fields>
+          <CopyOutput value="False" />
+          <Expression>SmartRound([_CurrentField_])</Expression>
+          <ChangeFieldType value="False" />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>SmartRound([_CurrentField_])</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxMultiFieldFormula" />
+    </Node>
+    <Node ToolID="65">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.ExpectEqual.ExpectEqual">
+        <Position x="1182" y="78" />
+      </GuiSettings>
+      <Properties>
+        <Configuration />
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxExpectEqual" />
+    </Node>
+    <Node ToolID="52">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.TextInput.TextInput">
+        <Position x="1074" y="126" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <NumRows value="2" />
+          <Fields>
+            <Field name="Gender" />
+            <Field name="Age Range" />
+            <Field name="Count" />
+          </Fields>
+          <Data>
+            <r>
+              <c>Female</c>
+              <c>51-64</c>
+              <c>1733</c>
+            </r>
+            <r>
+              <c>Male</c>
+              <c>51-64</c>
+              <c>1025</c>
+            </r>
+          </Data>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <AnnotationText>Task 2</AnnotationText>
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxTextInput" />
+    </Node>
+    <Node ToolID="54">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.TextInput.TextInput">
+        <Position x="1074" y="210" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <NumRows value="1" />
+          <Fields>
+            <Field name="Diagnosis Category" />
+            <Field name="Treatment Category" />
+            <Field name="Number of Overturned" />
+          </Fields>
+          <Data>
+            <r>
+              <c>Mental</c>
+              <c>Mental Health Treatment</c>
+              <c>809</c>
+            </r>
+          </Data>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <AnnotationText>Task 3</AnnotationText>
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxTextInput" />
+    </Node>
+    <Node ToolID="44">
+      <GuiSettings Plugin="PortfolioPluginsGui.ComposerImage.PortfolioComposerImage">
+        <Position x="1074" y="330" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <ImageMode>File</ImageMode>
+          <Filename>..\local_input\Task 4.jpg</Filename>
+          <ModifyFilename value="False" />
+          <StopIfNotFound value="True" />
+          <ImageStyle FixedWidth="false" ImageWidth="200" ShowBorder="false" BorderWidth="1" BorderColor="#000000" />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <AnnotationText>Task 4</AnnotationText>
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+        <Dependencies>
+          <Implicit />
+        </Dependencies>
+      </Properties>
+      <EngineSettings EngineDll="PortfolioPluginsEngine.dll" EngineDllEntryPoint="AlteryxPortfolioComposerImagePlugin" />
+    </Node>
+    <Node ToolID="73">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Filter.Filter">
+        <Position x="774" y="90" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Mode>Simple</Mode>
+          <Simple>
+            <Operator>IsNotNull</Operator>
+            <Field>Diagnosis Category</Field>
+            <Operands>
+              <IgnoreTimeInDateTime>True</IgnoreTimeInDateTime>
+              <DateType>fixed</DateType>
+              <PeriodDate>2026-02-28 12:31:19</PeriodDate>
+              <PeriodType>
+              </PeriodType>
+              <PeriodCount>0</PeriodCount>
+              <StartDate>2026-02-28 12:31:19</StartDate>
+              <EndDate>2026-02-28 12:31:19</EndDate>
+              <Operand>
+              </Operand>
+            </Operands>
+          </Simple>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>!IsNull([Diagnosis Category])</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFilter" />
+    </Node>
+    <Node ToolID="74">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Filter.Filter">
+        <Position x="582" y="162" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Expression>!IsEmpty([Diagnosis Category]) AND 
+!IsEmpty([Age Range]) AND 
+StartsWith([Determination], "Overturned")</Expression>
+          <Mode>Custom</Mode>
+        </Configuration>
+        <Annotation DisplayMode="2">
+          <Name />
+          <DefaultAnnotationText>!IsEmpty([Diagnosis Category]) AND 
+!IsEmpty([Age Range]) AND 
+StartsWith([Deter...</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFilter" />
+    </Node>
+    <Node ToolID="75">
+      <GuiSettings Plugin="AlteryxSpatialPluginsGui.Summarize.Summarize">
+        <Position x="678" y="162" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <SummarizeFields>
+            <SummarizeField field="Patient Gender" action="GroupBy" rename="Gender" />
+            <SummarizeField field="Age Range" action="GroupBy" rename="Age Range" />
+            <SummarizeField field="Reference ID" action="Count" rename="Count" />
+          </SummarizeFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxSpatialPluginsEngine.dll" EngineDllEntryPoint="AlteryxSummarize" />
+    </Node>
+    <Node ToolID="76">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Sort.Sort">
+        <Position x="774" y="162" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <SortInfo locale="1033">
+            <Field field="Gender" order="Ascending" />
+            <Field field="Count" order="Descending" />
+          </SortInfo>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <AnnotationText>Gender - Asc
+Count - Desc</AnnotationText>
+          <DefaultAnnotationText>Gender - Ascending
+Count - Descending</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxSort" />
+    </Node>
+    <Node ToolID="77">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Sample.Sample">
+        <Position x="870" y="162" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Mode>First</Mode>
+          <N>1</N>
+          <GroupFields orderChanged="False">
+            <Field name="Gender" />
+          </GroupFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>First 1 rows</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxSample" />
+    </Node>
+    <Node ToolID="78">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.ExpectEqual.ExpectEqual">
+        <Position x="1182" y="150" />
+      </GuiSettings>
+      <Properties>
+        <Configuration />
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxExpectEqual" />
+    </Node>
+    <Node ToolID="79">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Filter.Filter">
+        <Position x="582" y="246" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Expression>!IsEmpty([Diagnosis Category]) AND 
+!IsEmpty([Treatment Category]) AND 
+StartsWith([Determination], "Overturned")</Expression>
+          <Mode>Custom</Mode>
+        </Configuration>
+        <Annotation DisplayMode="2">
+          <Name />
+          <DefaultAnnotationText>!IsEmpty([Diagnosis Category]) AND 
+!IsEmpty([Treatment Category]) AND 
+StartsWi...</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFilter" />
+    </Node>
+    <Node ToolID="80">
+      <GuiSettings Plugin="AlteryxSpatialPluginsGui.Summarize.Summarize">
+        <Position x="678" y="246" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <SummarizeFields>
+            <SummarizeField field="Diagnosis Category" action="GroupBy" rename="Diagnosis Category" />
+            <SummarizeField field="Treatment Category" action="GroupBy" rename="Treatment Category" />
+            <SummarizeField field="Reference ID" action="Count" rename="Number of Overturned" />
+          </SummarizeFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxSpatialPluginsEngine.dll" EngineDllEntryPoint="AlteryxSummarize" />
+    </Node>
+    <Node ToolID="81">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Sort.Sort">
+        <Position x="774" y="246" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <SortInfo locale="1033">
+            <Field field="Number of Overturned" order="Descending" />
+          </SortInfo>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>Number of Overturned - Descending</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxSort" />
+    </Node>
+    <Node ToolID="82">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Sample.Sample">
+        <Position x="870" y="246" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Mode>First</Mode>
+          <N>1</N>
+          <GroupFields orderChanged="False" />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>First 1 rows</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxSample" />
+    </Node>
+    <Node ToolID="83">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.ExpectEqual.ExpectEqual">
+        <Position x="1182" y="234" />
+      </GuiSettings>
+      <Properties>
+        <Configuration />
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxExpectEqual" />
+    </Node>
+    <Node ToolID="85">
+      <GuiSettings Plugin="AlteryxSpatialPluginsGui.Summarize.Summarize">
+        <Position x="678" y="330" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <SummarizeFields>
+            <SummarizeField field="Report Year" action="GroupBy" rename="Year" />
+            <SummarizeField field="Determination" action="GroupBy" rename="Determination" />
+            <SummarizeField field="Reference ID" action="Count" rename="Count" />
+          </SummarizeFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxSpatialPluginsEngine.dll" EngineDllEntryPoint="AlteryxSummarize" />
+    </Node>
+    <Node ToolID="87">
+      <GuiSettings Plugin="PlotlyCharting">
+        <Position x="774" y="330" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <ChartingFields>
+            <Traces json:Array="true" xmlns:json="http://james.newtonking.com/projects/json">
+              <type>scatter</type>
+              <mode>lines</mode>
+              <name>IMR Decision Trends&lt;br&gt;
+2001 - 2016</name>
+              <xsrc>Year</xsrc>
+              <ysrc>Count</ysrc>
+              <transforms json:Array="true">
+                <type>groupby</type>
+                <groupssrc>Determination</groupssrc>
+                <groups>Overturned</groups>
+                <groups>Upheld</groups>
+                <groups>Overturned</groups>
+                <groups>Upheld</groups>
+                <groups>Overturned</groups>
+                <groups>Upheld</groups>
+                <groups>Overturned</groups>
+                <groups>Upheld</groups>
+                <groups>Overturned</groups>
+                <groups>Upheld</groups>
+                <groups>Overturned</groups>
+                <groups>Upheld</groups>
+                <groups>Overturned</groups>
+                <groups>Upheld</groups>
+                <groups>Overturned</groups>
+                <groups>Upheld</groups>
+                <groups>Overturned</groups>
+                <groups>Upheld</groups>
+                <groups>Overturned</groups>
+                <groups>Upheld</groups>
+                <groups>Overturned</groups>
+                <groups>Upheld</groups>
+                <groups>Overturned</groups>
+                <groups>Upheld</groups>
+                <groups>Overturned</groups>
+                <groups>Upheld</groups>
+                <groups>Overturned</groups>
+                <groups>Upheld</groups>
+                <groups>Overturned</groups>
+                <groups>Upheld</groups>
+                <groups>Overturned</groups>
+                <groups>Upheld</groups>
+                <styles>
+                  <target>Overturned</target>
+                  <value>
+                    <line>
+                      <width>2</width>
+                    </line>
+                  </value>
+                </styles>
+                <styles>
+                  <target>Upheld</target>
+                  <value>
+                    <line>
+                      <width>2</width>
+                    </line>
+                  </value>
+                </styles>
+              </transforms>
+            </Traces>
+            <Layout>
+              <title>
+                <text>&lt;b&gt;&amp;nbsp;IMR Decision Trends&lt;br&gt;
+2001 - 2016&amp;nbsp;&lt;/b&gt;</text>
+              </title>
+              <font>
+                <family>sans-serif</family>
+                <size>12</size>
+              </font>
+              <autosize>false</autosize>
+              <width>800</width>
+              <height>800</height>
+              <showlegend>true</showlegend>
+              <hovermode>closest</hovermode>
+              <margin>
+                <pad>0</pad>
+                <t>100</t>
+                <b>80</b>
+                <l>80</l>
+                <r>80</r>
+              </margin>
+              <legend>
+                <font>
+                  <size>12</size>
+                </font>
+                <borderwidth>0</borderwidth>
+              </legend>
+              <xaxis>
+                <range>0</range>
+                <range>15</range>
+                <autorange>true</autorange>
+                <title>
+                  <text>Year</text>
+                </title>
+                <type>category</type>
+                <tickfont>
+                  <size>12</size>
+                </tickfont>
+                <nticks>0</nticks>
+              </xaxis>
+              <yaxis>
+                <range>157.88888888888889</range>
+                <range>1120.1111111111111</range>
+                <autorange>true</autorange>
+                <title>
+                  <text>Count Decisions</text>
+                </title>
+                <type>linear</type>
+              </yaxis>
+            </Layout>
+          </ChartingFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="PortfolioPluginsEngine.dll" EngineDllEntryPoint="ComposerInteractiveCharting" />
+    </Node>
+    <Node ToolID="89">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Formula.Formula">
+        <Position x="582" y="330" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <FormulaFields>
+            <FormulaField expression="GetWord([Determination], 0)" field="Determination" size="25400" type="V_String" enabled="true" />
+          </FormulaFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText><![CDATA[Determination = GetWord([Determination], 0)
+]]></DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFormula" />
+    </Node>
+    <Node ToolID="16">
+      <GuiSettings Plugin="AlteryxGuiToolkit.ToolContainer.ToolContainer">
+        <Position x="66" y="1175" width="656" height="84" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Caption>Alteryx Educational Asset - Terms and Conditions</Caption>
+          <Style TextColor="#ffffff" FillColor="#4c6778" BorderColor="#00263e" Transparency="1" Margin="10" />
+          <Disabled value="False" />
+          <Folded value="False" />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <ChildNodes>
+        <Node ToolID="15">
+          <GuiSettings Plugin="AlteryxGuiToolkit.TextBox.TextBox">
+            <Position x="76" y="1209" width="636" height="40" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <Text>Use of this Alteryx asset is for educational purposes only and bound by the conditions set forth on alteryx.com/terms-and-conditions. Alteryx Information may not be reproduced, transmitted or distributed without Alteryx, Inc.'s permission.</Text>
+              <Font name="Corbel" size="8.25" style="0" />
+              <TextColor name="White" />
+              <FillColor name="White" />
+              <Shape shape="3" />
+              <Justification Justification="4" />
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+        </Node>
+      </ChildNodes>
+    </Node>
+    <Node ToolID="57">
+      <GuiSettings Plugin="AlteryxGuiToolkit.ToolContainer.ToolContainer">
+        <Position x="29" y="0" width="422" height="511" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Caption>About</Caption>
+          <Style TextColor="#314c4a" FillColor="#ecf2f2" BorderColor="#314c4a" Transparency="25" Margin="25" />
+          <Disabled value="False" />
+          <Folded value="False" />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <AnnotationText>About</AnnotationText>
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <ChildNodes>
+        <Node ToolID="56">
+          <GuiSettings Plugin="AlteryxGuiToolkit.TextBox.TextBox">
+            <Position x="54" y="49" width="372" height="437" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <Text>Weekly Challenge #492:
+  Trends in Medical Review Decisions
+
+Summary:
+
+Input Data:
+  ..\Local_input\Independent_Medical_Reviews.csv
+
+Output Data:
+
+  Task1: 
+    [Diagnosis Category]: Group by
+    [Per_Upheld]: Percentage of upheld decision]
+    [Per_Overturned]: Percentage of overturned decision]
+
+  Task2:
+    Group by
+    [Gender],  [Age Range]
+    [Count]: Count
+    Pick Max Count
+
+  Task3:
+    [Diagnosis Category] + [Treatment Category]
+    [Number of Overturned]: Max number of overturned decisions
+
+  Task4: 
+    [Image]: Line Chart
+      X-axis: Year
+      Y-axis: CountDecisions
+      Line: Decisions ([Overturned], [Upheld])
+
+Created by: Yoshiro Fujimori
+Last update: 2026-02-28</Text>
+              <Font name="Arial" size="8.25" style="0" />
+              <TextColor name="Black" />
+              <FillColor name="White" />
+              <Shape shape="0" />
+              <Justification Justification="3" />
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+        </Node>
+      </ChildNodes>
+    </Node>
+    <Node ToolID="50">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.TextInput.TextInput">
+        <Position x="1074" y="54" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <NumRows value="30" />
+          <Fields>
+            <Field name="Diagnosis Category" />
+            <Field name="Per_Overturned" />
+            <Field name="Per_Upheld" />
+          </Fields>
+          <Data>
+            <r>
+              <c>Alcohol and Drug Addiction</c>
+              <c>33.5</c>
+              <c>67</c>
+            </r>
+            <r>
+              <c>Autism Spectrum</c>
+              <c>77</c>
+              <c>23</c>
+            </r>
+            <r>
+              <c>Blood Related</c>
+              <c>43.5</c>
+              <c>56</c>
+            </r>
+            <r>
+              <c>Cancer</c>
+              <c>45.5</c>
+              <c>54</c>
+            </r>
+            <r>
+              <c>Cardiac/Circulatory</c>
+              <c>34.5</c>
+              <c>65</c>
+            </r>
+            <r>
+              <c>Central Nervous System/ Neuromuscular</c>
+              <c>46.5</c>
+              <c>54</c>
+            </r>
+            <r>
+              <c>Chronic Pain</c>
+              <c>22.25</c>
+              <c>78</c>
+            </r>
+            <r>
+              <c>Dental</c>
+              <c>58</c>
+              <c>42</c>
+            </r>
+            <r>
+              <c>Digestive System/ Gastrointestinal</c>
+              <c>33.5</c>
+              <c>66</c>
+            </r>
+            <r>
+              <c>Ears, Nose, Throat</c>
+              <c>38</c>
+              <c>62</c>
+            </r>
+            <r>
+              <c>Endocrine/ Metabolic</c>
+              <c>48</c>
+              <c>52</c>
+            </r>
+            <r>
+              <c>Foot</c>
+              <c>33.5</c>
+              <c>66</c>
+            </r>
+            <r>
+              <c>Genetic</c>
+              <c>56</c>
+              <c>44.5</c>
+            </r>
+            <r>
+              <c>Genitourinary/ Kidney</c>
+              <c>38.5</c>
+              <c>62</c>
+            </r>
+            <r>
+              <c>Immunologic</c>
+              <c>37</c>
+              <c>63</c>
+            </r>
+            <r>
+              <c>Infectious</c>
+              <c>66</c>
+              <c>33.5</c>
+            </r>
+            <r>
+              <c>Mental</c>
+              <c>46.5</c>
+              <c>54</c>
+            </r>
+            <r>
+              <c>Morbid Obesity</c>
+              <c>52</c>
+              <c>47.5</c>
+            </r>
+            <r>
+              <c>Not Applicable</c>
+              <c>38</c>
+              <c>62</c>
+            </r>
+            <r>
+              <c>OB-Gyn/ Pregnancy</c>
+              <c>44</c>
+              <c>56</c>
+            </r>
+            <r>
+              <c>Organ Failure</c>
+              <c>37.5</c>
+              <c>63</c>
+            </r>
+            <r>
+              <c>Orthopedic/ Musculoskeletal</c>
+              <c>28.5</c>
+              <c>71</c>
+            </r>
+            <r>
+              <c>Pediatrics</c>
+              <c>68</c>
+              <c>32</c>
+            </r>
+            <r>
+              <c>Post Surgical Complication</c>
+              <c>22.25</c>
+              <c>78</c>
+            </r>
+            <r>
+              <c>Prevention/Good Health</c>
+              <c>56</c>
+              <c>43.5</c>
+            </r>
+            <r>
+              <c>Respiratory System</c>
+              <c>41.5</c>
+              <c>59</c>
+            </r>
+            <r>
+              <c>Skin</c>
+              <c>44</c>
+              <c>56</c>
+            </r>
+            <r>
+              <c>Trauma/Injuries</c>
+              <c>34.5</c>
+              <c>65</c>
+            </r>
+            <r>
+              <c>Vision</c>
+              <c>38.5</c>
+              <c>62</c>
+            </r>
+            <r>
+              <c>Total</c>
+              <c>44</c>
+              <c>56</c>
+            </r>
+          </Data>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <AnnotationText>Task 1</AnnotationText>
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxTextInput" />
+    </Node>
+    <Node ToolID="88">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.BrowseV2.BrowseV2">
+        <Position x="870" y="330" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <TempFile>C:\Users\yoshi\AppData\Local\Temp\Alteryx\Engine_12332_76fe8053871342ac81ddd55715cac4bc_\Engine_12332_0ca500c7c1004a14a7ea0e40b53ecf09~.yxdb</TempFile>
+          <TempFileDataProfiling />
+          <Layout>
+            <ViewMode>Single</ViewMode>
+            <ViewSize value="100" />
+            <View1>
+              <DefaultTab>Report</DefaultTab>
+              <Hints>
+                <Table />
+              </Hints>
+            </View1>
+            <View2 />
+          </Layout>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxBrowseV2" />
+    </Node>
+    <Node ToolID="84">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.BrowseV2.BrowseV2">
+        <Position x="1170" y="330" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <TempFile>C:\Users\yoshi\AppData\Local\Temp\Alteryx\Engine_12332_76fe8053871342ac81ddd55715cac4bc_\Engine_12332_3312c8004a56474fade5bff5f523fa31~.yxdb</TempFile>
+          <TempFileDataProfiling />
+          <Layout>
+            <ViewMode>Single</ViewMode>
+            <ViewSize value="100" />
+            <View1>
+              <DefaultTab>Report</DefaultTab>
+              <Hints>
+                <Table />
+              </Hints>
+            </View1>
+            <View2 />
+          </Layout>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxBrowseV2" />
+    </Node>
+  </Nodes>
+  <Connections>
+    <Connection>
+      <Origin ToolID="21" Connection="Output" />
+      <Destination ToolID="22" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="21" Connection="Output" />
+      <Destination ToolID="59" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="21" Connection="Output" />
+      <Destination ToolID="74" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="21" Connection="Output" />
+      <Destination ToolID="79" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="21" Connection="Output" />
+      <Destination ToolID="89" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="59" Connection="Output" />
+      <Destination ToolID="60" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="60" Connection="Output" />
+      <Destination ToolID="73" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="63" Connection="Output" />
+      <Destination ToolID="64" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="64" Connection="Output" />
+      <Destination ToolID="65" Connection="Actual" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="50" Connection="Output" />
+      <Destination ToolID="65" Connection="Expected" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="52" Connection="Output" />
+      <Destination ToolID="78" Connection="Expected" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="77" Connection="Output" />
+      <Destination ToolID="78" Connection="Actual" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="54" Connection="Output" />
+      <Destination ToolID="83" Connection="Expected" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="82" Connection="Output" />
+      <Destination ToolID="83" Connection="Actual" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="44" Connection="Output" />
+      <Destination ToolID="84" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="73" Connection="True" />
+      <Destination ToolID="63" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="74" Connection="True" />
+      <Destination ToolID="75" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="75" Connection="Output" />
+      <Destination ToolID="76" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="76" Connection="Output" />
+      <Destination ToolID="77" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="79" Connection="True" />
+      <Destination ToolID="80" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="80" Connection="Output" />
+      <Destination ToolID="81" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="81" Connection="Output" />
+      <Destination ToolID="82" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="85" Connection="Output" />
+      <Destination ToolID="87" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="87" Connection="Output" />
+      <Destination ToolID="88" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="89" Connection="Output" />
+      <Destination ToolID="85" Connection="Input" />
+    </Connection>
+  </Connections>
+  <Properties>
+    <Memory default="True" />
+    <GlobalRecordLimit value="0" />
+    <TempFiles default="True" />
+    <Annotation on="True" includeToolName="False" />
+    <ConvErrorLimit value="10" />
+    <ConvErrorLimit_Stop value="False" />
+    <CancelOnError value="False" />
+    <DisableBrowse value="False" />
+    <EnablePerformanceProfiling value="False" />
+    <RunWithE2 value="True" />
+    <DefaultTZ value="Local" />
+    <SortedGrouping value="True" />
+    <PredictiveToolsCodePage value="1252" />
+    <DisableAllOutput value="False" />
+    <ShowAllMacroMessages value="False" />
+    <ShowConnectionStatusIsOn value="True" />
+    <ShowConnectionStatusOnlyWhenRunning value="True" />
+    <ZoomLevel value="0" />
+    <LayoutType>Horizontal</LayoutType>
+    <IsTemplate value="False" />
+    <MetaInfo>
+      <NameIsFileName value="True" />
+      <Name>Challenge 492_yf</Name>
+      <Description />
+      <RootToolName />
+      <ToolVersion />
+      <ToolInDb value="False" />
+      <CategoryName />
+      <SearchTags />
+      <Author />
+      <Company />
+      <Copyright />
+      <DescriptionLink actual="" displayed="" />
+      <Example>
+        <Description />
+        <File />
+      </Example>
+      <WorkflowId value="fdb57cf8-e348-48ff-a9c4-9f794e432468" />
+      <Telemetry>
+        <PreviousWorkflowId value="1494a76a-6cd7-4552-b7c0-abb99cc2aa20" />
+        <OriginWorkflowId value="e7b005d5-e996-4773-b832-b64314257c0f" />
+      </Telemetry>
+      <PlatformWorkflowId value="" />
+    </MetaInfo>
+    <Events>
+      <Enabled value="True" />
+    </Events>
+  </Properties>
+</AlteryxDocument>
