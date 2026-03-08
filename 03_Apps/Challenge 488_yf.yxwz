@@ -1,0 +1,1846 @@
+<?xml version="1.0"?>
+<AlteryxDocument yxmdVer="2025.2" RunE2="T">
+  <Nodes>
+    <Node ToolID="204">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Formula.Formula">
+        <Position x="690" y="522" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <FormulaFields>
+            <FormulaField expression="RAND()" field="rand" size="8" type="Double" enabled="true" />
+            <FormulaField expression="[CardValue] + [Suit]" field="Card" size="1073741823" type="V_WString" enabled="true" />
+          </FormulaFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText><![CDATA[rand = RAND()
+Card = [CardValue] + [Suit]
+]]></DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="Suit" size="1073741823" source="TextInput:" type="V_WString" />
+            <Field name="CardValueInt" source="TextInput:" type="Int32" />
+            <Field name="CardValue" size="2147483647" source="TextInput:" type="V_String" />
+            <Field name="rand" source="Formula: RAND()" type="Double" />
+            <Field name="Card" size="1073741823" source="Formula: [CardValue] + [Suit]" type="V_WString" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFormula" />
+    </Node>
+    <Node ToolID="206">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Sort.Sort">
+        <Position x="786" y="522" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <SortInfo locale="1033">
+            <Field field="rand" order="Ascending" />
+          </SortInfo>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>rand - Ascending</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="Suit" size="1073741823" source="TextInput:" type="V_WString" />
+            <Field name="CardValueInt" source="TextInput:" type="Int32" />
+            <Field name="CardValue" size="2147483647" source="TextInput:" type="V_String" />
+            <Field name="rand" source="Formula: RAND()" type="Double" />
+            <Field name="Card" size="1073741823" source="Formula: [Suit] + [CardValue]" type="V_WString" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxSort" />
+    </Node>
+    <Node ToolID="208">
+      <GuiSettings Plugin="AlteryxGuiToolkit.Questions.Tab.Tab">
+        <Position x="0" y="0" width="59" height="59" />
+      </GuiSettings>
+      <Properties>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+    </Node>
+    <Node ToolID="211">
+      <GuiSettings Plugin="AlteryxGuiToolkit.Error.Error">
+        <Position x="966" y="378" width="59" height="59" />
+      </GuiSettings>
+      <Properties>
+        <Configuration />
+        <Annotation DisplayMode="2">
+          <Name />
+          <AnnotationText>[#1]</AnnotationText>
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+    </Node>
+    <Node ToolID="212">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.RecordID.RecordID">
+        <Position x="882" y="522" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <FieldName>RecordID</FieldName>
+          <StartValue>1</StartValue>
+          <FieldType>Int32</FieldType>
+          <FieldSize>6</FieldSize>
+          <Position>0</Position>
+          <GroupFields orderChanged="False" />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="RecordID" source="RecordID: Starting Value=1" type="Int32" />
+            <Field name="Suit" size="1073741823" source="TextInput:" type="V_WString" />
+            <Field name="CardValueInt" source="TextInput:" type="Int32" />
+            <Field name="CardValue" size="2147483647" source="TextInput:" type="V_String" />
+            <Field name="rand" source="Formula: RAND()" type="Double" />
+            <Field name="Card" size="1073741823" source="Formula: [Suit] + [CardValue]" type="V_WString" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxRecordID" />
+    </Node>
+    <Node ToolID="213">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Filter.Filter">
+        <Position x="1062" y="522" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Expression>[RecordID] &gt; 8 * 6</Expression>
+          <Mode>Custom</Mode>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>[RecordID] &gt; 8 * 6</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="True">
+          <RecordInfo>
+            <Field name="RecordID" source="RecordID: Starting Value=1" type="Int32" />
+            <Field name="Suit" size="1073741823" source="TextInput:" type="V_WString" />
+            <Field name="CardValueInt" source="TextInput:" type="Int32" />
+            <Field name="CardValue" size="2147483647" source="TextInput:" type="V_String" />
+            <Field name="rand" source="Formula: RAND()" type="Double" />
+            <Field name="Card" size="1073741823" source="Formula: [Suit] + [CardValue]" type="V_WString" />
+          </RecordInfo>
+        </MetaInfo>
+        <MetaInfo connection="False">
+          <RecordInfo>
+            <Field name="RecordID" source="RecordID: Starting Value=1" type="Int32" />
+            <Field name="Suit" size="1073741823" source="TextInput:" type="V_WString" />
+            <Field name="CardValueInt" source="TextInput:" type="Int32" />
+            <Field name="CardValue" size="2147483647" source="TextInput:" type="V_String" />
+            <Field name="rand" source="Formula: RAND()" type="Double" />
+            <Field name="Card" size="1073741823" source="Formula: [Suit] + [CardValue]" type="V_WString" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFilter" />
+    </Node>
+    <Node ToolID="216">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.AlteryxSelect.AlteryxSelect">
+        <Position x="1290" y="510" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <OrderChanged value="False" />
+          <CommaDecimal value="False" />
+          <SelectFields>
+            <SelectField field="Card" selected="True" />
+            <SelectField field="*Unknown" selected="False" />
+          </SelectFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="Card" size="1073741823" source="Formula: [CardValue] + [Suit]" type="V_WString" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxSelect" />
+    </Node>
+    <Node ToolID="217">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Tile.Tile">
+        <Position x="1182" y="618" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Method>EqualRecords</Method>
+          <EqualRecords>
+            <NumTiles value="8" />
+            <SortLocale>1033</SortLocale>
+          </EqualRecords>
+          <GroupFields orderChanged="False" />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="RecordID" source="RecordID: Starting Value=1" type="Int32" />
+            <Field name="Suit" size="1073741823" source="TextInput:" type="V_WString" />
+            <Field name="CardValueInt" source="TextInput:" type="Int32" />
+            <Field name="CardValue" size="2147483647" source="TextInput:" type="V_String" />
+            <Field name="rand" source="Formula: RAND()" type="Double" />
+            <Field name="Card" size="1073741823" source="Formula: [CardValue] + [Suit]" type="V_WString" />
+            <Field name="Tile_Num" source="Tile" type="Int32" />
+            <Field name="Tile_SequenceNum" source="Tile" type="Int32" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxTile" />
+    </Node>
+    <Node ToolID="219">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Formula.Formula">
+        <Position x="1290" y="618" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <FormulaFields>
+            <FormulaField expression="&quot;Player &quot; + ToString([Tile_Num])" field="Player" size="1073741823" type="V_WString" enabled="true" />
+          </FormulaFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <AnnotationText>Player</AnnotationText>
+          <DefaultAnnotationText><![CDATA[Player = "Player " + ToString([Tile_Num])
+]]></DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="RecordID" source="RecordID: Starting Value=1" type="Int32" />
+            <Field name="Suit" size="1073741823" source="TextInput:" type="V_WString" />
+            <Field name="CardValueInt" source="TextInput:" type="Int32" />
+            <Field name="CardValue" size="2147483647" source="TextInput:" type="V_String" />
+            <Field name="rand" source="Formula: RAND()" type="Double" />
+            <Field name="Card" size="1073741823" source="Formula: [CardValue] + [Suit]" type="V_WString" />
+            <Field name="Tile_Num" source="Tile" type="Int32" />
+            <Field name="Tile_SequenceNum" source="Tile" type="Int32" />
+            <Field name="Player" size="1073741823" source="Formula: &quot;Player &quot; + ToString([Tile_Num])" type="V_WString" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFormula" />
+    </Node>
+    <Node ToolID="220">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.CrossTab.CrossTab">
+        <Position x="1398" y="618" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <GroupFields>
+            <Field field="Tile_SequenceNum" />
+          </GroupFields>
+          <HeaderField field="Player" />
+          <DataField field="Card" />
+          <Methods>
+            <Method method="Concat" />
+            <Separator>,</Separator>
+            <FieldSize value="2048" />
+          </Methods>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="Tile_SequenceNum" source="CrossTab:Group:Concat:" type="Int32" />
+            <Field name="Player_1" size="2048" source="CrossTab:Header:Player:Player 1:Concat:" type="V_WString" />
+            <Field name="Player_2" size="2048" source="CrossTab:Header:Player:Player 2:Concat:" type="V_WString" />
+            <Field name="Player_3" size="2048" source="CrossTab:Header:Player:Player 3:Concat:" type="V_WString" />
+            <Field name="Player_4" size="2048" source="CrossTab:Header:Player:Player 4:Concat:" type="V_WString" />
+            <Field name="Player_5" size="2048" source="CrossTab:Header:Player:Player 5:Concat:" type="V_WString" />
+            <Field name="Player_6" size="2048" source="CrossTab:Header:Player:Player 6:Concat:" type="V_WString" />
+            <Field name="Player_7" size="2048" source="CrossTab:Header:Player:Player 7:Concat:" type="V_WString" />
+            <Field name="Player_8" size="2048" source="CrossTab:Header:Player:Player 8:Concat:" type="V_WString" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxCrossTab" />
+    </Node>
+    <Node ToolID="221">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.AlteryxSelect.AlteryxSelect">
+        <Position x="1494" y="618" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <OrderChanged value="False" />
+          <CommaDecimal value="False" />
+          <SelectFields>
+            <SelectField field="Tile_SequenceNum" selected="False" />
+            <SelectField field="*Unknown" selected="True" />
+          </SelectFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="Player_1" size="2048" source="CrossTab:Header:Player:Player 1:Concat:" type="V_WString" />
+            <Field name="Player_2" size="2048" source="CrossTab:Header:Player:Player 2:Concat:" type="V_WString" />
+            <Field name="Player_3" size="2048" source="CrossTab:Header:Player:Player 3:Concat:" type="V_WString" />
+            <Field name="Player_4" size="2048" source="CrossTab:Header:Player:Player 4:Concat:" type="V_WString" />
+            <Field name="Player_5" size="2048" source="CrossTab:Header:Player:Player 5:Concat:" type="V_WString" />
+            <Field name="Player_6" size="2048" source="CrossTab:Header:Player:Player 6:Concat:" type="V_WString" />
+            <Field name="Player_7" size="2048" source="CrossTab:Header:Player:Player 7:Concat:" type="V_WString" />
+            <Field name="Player_8" size="2048" source="CrossTab:Header:Player:Player 8:Concat:" type="V_WString" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxSelect" />
+    </Node>
+    <Node ToolID="226">
+      <GuiSettings Plugin="AlteryxSpatialPluginsGui.Summarize.Summarize">
+        <Position x="882" y="750" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <SummarizeFields>
+            <SummarizeField field="Player" action="GroupBy" rename="Player" />
+            <SummarizeField field="Suit" action="GroupBy" rename="Suit" />
+            <SummarizeField field="SuitPriority" action="GroupBy" rename="SuitPriority" />
+            <SummarizeField field="Card" action="Count" rename="Count" />
+            <SummarizeField field="CardValue" action="First" rename="First_CardValue" />
+            <SummarizeField field="Card" action="Concat" rename="Concat_Card">
+              <Concat_Start />
+              <Separator>,</Separator>
+              <Concat_End />
+            </SummarizeField>
+          </SummarizeFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="Player" size="1073741823" source="Summarize: GroupBy - Player" type="V_WString" />
+            <Field name="Suit" size="1073741823" source="Summarize: GroupBy - Suit" type="V_WString" />
+            <Field name="SuitPriority" source="Summarize: GroupBy - SuitPriority" type="Int32" />
+            <Field name="Count" source="Summarize: Count - RecordID" type="Int64" />
+            <Field name="First_CardValue" size="2147483647" source="TextInput:" type="V_String" />
+            <Field name="Concat_Card" size="1073741823" source="Summarize: Concat - Card" type="V_WString" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxSpatialPluginsEngine.dll" EngineDllEntryPoint="AlteryxSummarize" />
+    </Node>
+    <Node ToolID="228">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Sort.Sort">
+        <Position x="786" y="750" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <SortInfo locale="1033">
+            <Field field="Player" order="Ascending" />
+            <Field field="Suit" order="Ascending" />
+            <Field field="CardValueInt" order="Ascending" />
+          </SortInfo>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>Player - Ascending
+Suit - Ascending
+CardValueInt - Ascending</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="RecordID" source="RecordID: Starting Value=1" type="Int32" />
+            <Field name="Suit" size="1073741823" source="TextInput:" type="V_WString" />
+            <Field name="CardValueInt" source="TextInput:" type="Int32" />
+            <Field name="CardValue" size="2147483647" source="TextInput:" type="V_String" />
+            <Field name="rand" source="Formula: RAND()" type="Double" />
+            <Field name="Card" size="1073741823" source="Formula: [CardValue] + [Suit]" type="V_WString" />
+            <Field name="Tile_Num" source="Tile" type="Int32" />
+            <Field name="Tile_SequenceNum" source="Tile" type="Int32" />
+            <Field name="Player" size="1073741823" source="Formula: &quot;Player &quot; + ToString([Tile_Num])" type="V_WString" />
+            <Field name="SuitPriority" source="TextInput:" type="Int32" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxSort" />
+    </Node>
+    <Node ToolID="229">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Sort.Sort">
+        <Position x="978" y="750" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <SortInfo locale="1033">
+            <Field field="Player" order="Ascending" />
+            <Field field="Count" order="Ascending" />
+            <Field field="First_CardValue" order="Ascending" />
+            <Field field="SuitPriority" order="Ascending" />
+          </SortInfo>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>Player - Ascending
+Count - Ascending
+First_CardValue - Ascending
+SuitPriority - Ascending</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="Player" size="1073741823" source="Summarize: GroupBy - Player" type="V_WString" />
+            <Field name="Suit" size="1073741823" source="Summarize: GroupBy - Suit" type="V_WString" />
+            <Field name="SuitPriority" source="Summarize: GroupBy - SuitPriority" type="Int32" />
+            <Field name="Count" source="Summarize: Count - RecordID" type="Int64" />
+            <Field name="First_CardValue" size="2147483647" source="TextInput:" type="V_String" />
+            <Field name="Concat_Card" size="1073741823" source="Summarize: Concat - Card" type="V_WString" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxSort" />
+    </Node>
+    <Node ToolID="233">
+      <GuiSettings Plugin="AlteryxSpatialPluginsGui.Summarize.Summarize">
+        <Position x="1062" y="750" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <SummarizeFields>
+            <SummarizeField field="Player" action="GroupBy" rename="Player" />
+            <SummarizeField field="Concat_Card" action="Concat" rename="cards">
+              <Concat_Start />
+              <Separator>,</Separator>
+              <Concat_End />
+            </SummarizeField>
+          </SummarizeFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="Player" size="1073741823" source="Summarize: GroupBy - Player" type="V_WString" />
+            <Field name="cards" size="1073741823" source="Summarize: Concat - Concat_Card" type="V_WString" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxSpatialPluginsEngine.dll" EngineDllEntryPoint="AlteryxSummarize" />
+    </Node>
+    <Node ToolID="234">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.TextToColumns.TextToColumns">
+        <Position x="1182" y="750" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Field>cards</Field>
+          <Delimeters value="," />
+          <NumFields value="3" />
+          <Mode value="Rows" />
+          <Flags value="0" />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="Player" size="1073741823" source="Summarize: GroupBy - Player" type="V_WString" />
+            <Field description="TextToColumns: Parsed from cards" name="cards" size="1073741823" source="TextToColumns: Parsed from cards" type="V_WString" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxTextToColumns" />
+    </Node>
+    <Node ToolID="235">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.CrossTab.CrossTab">
+        <Position x="1398" y="750" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <GroupFields>
+            <Field field="RecordID" />
+          </GroupFields>
+          <HeaderField field="Player" />
+          <DataField field="cards" />
+          <Methods>
+            <Method method="Concat" />
+            <Separator>,</Separator>
+            <FieldSize value="2048" />
+          </Methods>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="RecordID" source="CrossTab:Group:Concat:" type="Int32" />
+            <Field name="Player_1" size="2048" source="CrossTab:Header:Player:Player 1:Concat:" type="V_WString" />
+            <Field name="Player_2" size="2048" source="CrossTab:Header:Player:Player 2:Concat:" type="V_WString" />
+            <Field name="Player_3" size="2048" source="CrossTab:Header:Player:Player 3:Concat:" type="V_WString" />
+            <Field name="Player_4" size="2048" source="CrossTab:Header:Player:Player 4:Concat:" type="V_WString" />
+            <Field name="Player_5" size="2048" source="CrossTab:Header:Player:Player 5:Concat:" type="V_WString" />
+            <Field name="Player_6" size="2048" source="CrossTab:Header:Player:Player 6:Concat:" type="V_WString" />
+            <Field name="Player_7" size="2048" source="CrossTab:Header:Player:Player 7:Concat:" type="V_WString" />
+            <Field name="Player_8" size="2048" source="CrossTab:Header:Player:Player 8:Concat:" type="V_WString" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxCrossTab" />
+    </Node>
+    <Node ToolID="236">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.RecordID.RecordID">
+        <Position x="1290" y="750" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <FieldName>RecordID</FieldName>
+          <StartValue>1</StartValue>
+          <FieldType>Int32</FieldType>
+          <FieldSize>6</FieldSize>
+          <Position>0</Position>
+          <GroupFields orderChanged="False">
+            <Field name="Player" />
+          </GroupFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="RecordID" source="RecordID: Starting Value=1" type="Int32" />
+            <Field name="Player" size="1073741823" source="Summarize: GroupBy - Player" type="V_WString" />
+            <Field description="TextToColumns: Parsed from cards" name="cards" size="1073741823" source="TextToColumns: Parsed from cards" type="V_WString" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxRecordID" />
+    </Node>
+    <Node ToolID="237">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.AlteryxSelect.AlteryxSelect">
+        <Position x="1494" y="750" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <OrderChanged value="False" />
+          <CommaDecimal value="False" />
+          <SelectFields>
+            <SelectField field="RecordID" selected="False" />
+            <SelectField field="*Unknown" selected="True" />
+          </SelectFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="Player_1" size="2048" source="CrossTab:Header:Player:Player 1:Concat:" type="V_WString" />
+            <Field name="Player_2" size="2048" source="CrossTab:Header:Player:Player 2:Concat:" type="V_WString" />
+            <Field name="Player_3" size="2048" source="CrossTab:Header:Player:Player 3:Concat:" type="V_WString" />
+            <Field name="Player_4" size="2048" source="CrossTab:Header:Player:Player 4:Concat:" type="V_WString" />
+            <Field name="Player_5" size="2048" source="CrossTab:Header:Player:Player 5:Concat:" type="V_WString" />
+            <Field name="Player_6" size="2048" source="CrossTab:Header:Player:Player 6:Concat:" type="V_WString" />
+            <Field name="Player_7" size="2048" source="CrossTab:Header:Player:Player 7:Concat:" type="V_WString" />
+            <Field name="Player_8" size="2048" source="CrossTab:Header:Player:Player 8:Concat:" type="V_WString" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxSelect" />
+    </Node>
+    <Node ToolID="1">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.TextInput.TextInput">
+        <Position x="594" y="18" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <NumRows value="4" />
+          <Fields>
+            <Field name="Suit" />
+            <Field name="SuitName" />
+          </Fields>
+          <Data>
+            <r>
+              <c>♠</c>
+              <c>spades</c>
+            </r>
+            <r>
+              <c>♥</c>
+              <c>hearts</c>
+            </r>
+            <r>
+              <c>♦</c>
+              <c>diamonds</c>
+            </r>
+            <r>
+              <c>♣</c>
+              <c>clubs</c>
+            </r>
+          </Data>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <AnnotationText>Suits</AnnotationText>
+          <DefaultAnnotationText>Suits</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="Suit" size="1073741823" source="TextInput:" type="V_WString" />
+            <Field name="SuitName" size="2147483647" source="TextInput:" type="V_String" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxTextInput" />
+    </Node>
+    <Node ToolID="150">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.TextInput.TextInput">
+        <Position x="594" y="128" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <NumRows value="13" />
+          <Fields>
+            <Field name="CardValueInt" />
+            <Field name="CardValue" />
+          </Fields>
+          <Data>
+            <r>
+              <c>11</c>
+              <c>J</c>
+            </r>
+            <r>
+              <c>12</c>
+              <c>Q</c>
+            </r>
+            <r>
+              <c>13</c>
+              <c>K</c>
+            </r>
+            <r>
+              <c>14</c>
+              <c>A</c>
+            </r>
+            <r>
+              <c>2</c>
+              <c>2</c>
+            </r>
+            <r>
+              <c>3</c>
+              <c>3</c>
+            </r>
+            <r>
+              <c>4</c>
+              <c>4</c>
+            </r>
+            <r>
+              <c>5</c>
+              <c>5</c>
+            </r>
+            <r>
+              <c>6</c>
+              <c>6</c>
+            </r>
+            <r>
+              <c>7</c>
+              <c>7</c>
+            </r>
+            <r>
+              <c>8</c>
+              <c>8</c>
+            </r>
+            <r>
+              <c>9</c>
+              <c>9</c>
+            </r>
+            <r>
+              <c>10</c>
+              <c>10</c>
+            </r>
+          </Data>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <AnnotationText>Card Value</AnnotationText>
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="CardValueInt" source="TextInput:" type="Int32" />
+            <Field name="CardValue" size="2147483647" source="TextInput:" type="V_String" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxTextInput" />
+    </Node>
+    <Node ToolID="197">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.AppendFields.AppendFields">
+        <Position x="786" y="115" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <CartesianMode>Error</CartesianMode>
+          <SelectConfiguration>
+            <Configuration outputConnection="Output">
+              <OrderChanged value="False" />
+              <CommaDecimal value="False" />
+              <SelectFields>
+                <SelectField field="Target_SuitName" selected="False" input="Target_" />
+                <SelectField field="*Unknown" selected="True" />
+              </SelectFields>
+            </Configuration>
+          </SelectConfiguration>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="SuitPriority" source="RecordID: Starting Value=1" type="Int32" />
+            <Field name="Suit" size="1073741823" source="TextInput:" type="V_WString" />
+            <Field name="CardValueInt" source="TextInput:" type="Int32" />
+            <Field name="CardValue" size="2147483647" source="TextInput:" type="V_String" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxAppendFields" />
+    </Node>
+    <Node ToolID="198">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Sort.Sort">
+        <Position x="882" y="116" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <SortInfo locale="1033">
+            <Field field="SuitPriority" order="Ascending" />
+            <Field field="CardValueInt" order="Ascending" />
+          </SortInfo>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>SuitPriority - Ascending
+CardValueInt - Ascending</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="SuitPriority" source="RecordID: Starting Value=1" type="Int32" />
+            <Field name="Suit" size="1073741823" source="TextInput:" type="V_WString" />
+            <Field name="CardValueInt" source="TextInput:" type="Int32" />
+            <Field name="CardValue" size="2147483647" source="TextInput:" type="V_String" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxSort" />
+    </Node>
+    <Node ToolID="199">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.RecordID.RecordID">
+        <Position x="690" y="19" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <FieldName>SuitPriority</FieldName>
+          <StartValue>1</StartValue>
+          <FieldType>Int32</FieldType>
+          <FieldSize>6</FieldSize>
+          <Position>0</Position>
+          <GroupFields orderChanged="False" />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="SuitPriority" source="RecordID: Starting Value=1" type="Int32" />
+            <Field name="Suit" size="1073741823" source="TextInput:" type="V_WString" />
+            <Field name="SuitName" size="2147483647" source="TextInput:" type="V_String" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxRecordID" />
+    </Node>
+    <Node ToolID="200">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.AlteryxSelect.AlteryxSelect">
+        <Position x="978" y="120" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <OrderChanged value="False" />
+          <CommaDecimal value="False" />
+          <SelectFields>
+            <SelectField field="SuitPriority" selected="False" />
+            <SelectField field="*Unknown" selected="True" />
+          </SelectFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="Suit" size="1073741823" source="TextInput:" type="V_WString" />
+            <Field name="CardValueInt" source="TextInput:" type="Int32" />
+            <Field name="CardValue" size="2147483647" source="TextInput:" type="V_String" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxSelect" />
+    </Node>
+    <Node ToolID="168">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.TextInput.TextInput">
+        <Position x="1002" y="18" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <NumRows value="52" />
+          <Fields>
+            <Field name="Suit" />
+            <Field name="CardValueInt" />
+            <Field name="CardValue" />
+          </Fields>
+          <Data>
+            <r>
+              <c>♠</c>
+              <c>2</c>
+              <c>2</c>
+            </r>
+            <r>
+              <c>♠</c>
+              <c>3</c>
+              <c>3</c>
+            </r>
+            <r>
+              <c>♠</c>
+              <c>4</c>
+              <c>4</c>
+            </r>
+            <r>
+              <c>♠</c>
+              <c>5</c>
+              <c>5</c>
+            </r>
+            <r>
+              <c>♠</c>
+              <c>6</c>
+              <c>6</c>
+            </r>
+            <r>
+              <c>♠</c>
+              <c>7</c>
+              <c>7</c>
+            </r>
+            <r>
+              <c>♠</c>
+              <c>8</c>
+              <c>8</c>
+            </r>
+            <r>
+              <c>♠</c>
+              <c>9</c>
+              <c>9</c>
+            </r>
+            <r>
+              <c>♠</c>
+              <c>10</c>
+              <c>10</c>
+            </r>
+            <r>
+              <c>♠</c>
+              <c>11</c>
+              <c>J</c>
+            </r>
+            <r>
+              <c>♠</c>
+              <c>12</c>
+              <c>Q</c>
+            </r>
+            <r>
+              <c>♠</c>
+              <c>13</c>
+              <c>K</c>
+            </r>
+            <r>
+              <c>♠</c>
+              <c>14</c>
+              <c>A</c>
+            </r>
+            <r>
+              <c>♥</c>
+              <c>2</c>
+              <c>2</c>
+            </r>
+            <r>
+              <c>♥</c>
+              <c>3</c>
+              <c>3</c>
+            </r>
+            <r>
+              <c>♥</c>
+              <c>4</c>
+              <c>4</c>
+            </r>
+            <r>
+              <c>♥</c>
+              <c>5</c>
+              <c>5</c>
+            </r>
+            <r>
+              <c>♥</c>
+              <c>6</c>
+              <c>6</c>
+            </r>
+            <r>
+              <c>♥</c>
+              <c>7</c>
+              <c>7</c>
+            </r>
+            <r>
+              <c>♥</c>
+              <c>8</c>
+              <c>8</c>
+            </r>
+            <r>
+              <c>♥</c>
+              <c>9</c>
+              <c>9</c>
+            </r>
+            <r>
+              <c>♥</c>
+              <c>10</c>
+              <c>10</c>
+            </r>
+            <r>
+              <c>♥</c>
+              <c>11</c>
+              <c>J</c>
+            </r>
+            <r>
+              <c>♥</c>
+              <c>12</c>
+              <c>Q</c>
+            </r>
+            <r>
+              <c>♥</c>
+              <c>13</c>
+              <c>K</c>
+            </r>
+            <r>
+              <c>♥</c>
+              <c>14</c>
+              <c>A</c>
+            </r>
+            <r>
+              <c>♦</c>
+              <c>2</c>
+              <c>2</c>
+            </r>
+            <r>
+              <c>♦</c>
+              <c>3</c>
+              <c>3</c>
+            </r>
+            <r>
+              <c>♦</c>
+              <c>4</c>
+              <c>4</c>
+            </r>
+            <r>
+              <c>♦</c>
+              <c>5</c>
+              <c>5</c>
+            </r>
+            <r>
+              <c>♦</c>
+              <c>6</c>
+              <c>6</c>
+            </r>
+            <r>
+              <c>♦</c>
+              <c>7</c>
+              <c>7</c>
+            </r>
+            <r>
+              <c>♦</c>
+              <c>8</c>
+              <c>8</c>
+            </r>
+            <r>
+              <c>♦</c>
+              <c>9</c>
+              <c>9</c>
+            </r>
+            <r>
+              <c>♦</c>
+              <c>10</c>
+              <c>10</c>
+            </r>
+            <r>
+              <c>♦</c>
+              <c>11</c>
+              <c>J</c>
+            </r>
+            <r>
+              <c>♦</c>
+              <c>12</c>
+              <c>Q</c>
+            </r>
+            <r>
+              <c>♦</c>
+              <c>13</c>
+              <c>K</c>
+            </r>
+            <r>
+              <c>♦</c>
+              <c>14</c>
+              <c>A</c>
+            </r>
+            <r>
+              <c>♣</c>
+              <c>2</c>
+              <c>2</c>
+            </r>
+            <r>
+              <c>♣</c>
+              <c>3</c>
+              <c>3</c>
+            </r>
+            <r>
+              <c>♣</c>
+              <c>4</c>
+              <c>4</c>
+            </r>
+            <r>
+              <c>♣</c>
+              <c>5</c>
+              <c>5</c>
+            </r>
+            <r>
+              <c>♣</c>
+              <c>6</c>
+              <c>6</c>
+            </r>
+            <r>
+              <c>♣</c>
+              <c>7</c>
+              <c>7</c>
+            </r>
+            <r>
+              <c>♣</c>
+              <c>8</c>
+              <c>8</c>
+            </r>
+            <r>
+              <c>♣</c>
+              <c>9</c>
+              <c>9</c>
+            </r>
+            <r>
+              <c>♣</c>
+              <c>10</c>
+              <c>10</c>
+            </r>
+            <r>
+              <c>♣</c>
+              <c>11</c>
+              <c>J</c>
+            </r>
+            <r>
+              <c>♣</c>
+              <c>12</c>
+              <c>Q</c>
+            </r>
+            <r>
+              <c>♣</c>
+              <c>13</c>
+              <c>K</c>
+            </r>
+            <r>
+              <c>♣</c>
+              <c>14</c>
+              <c>A</c>
+            </r>
+          </Data>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <AnnotationText>Task 1: Complete Deck</AnnotationText>
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="Suit" size="1073741823" source="TextInput:" type="V_WString" />
+            <Field name="CardValueInt" source="TextInput:" type="Int32" />
+            <Field name="CardValue" size="2147483647" source="TextInput:" type="V_String" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxTextInput" />
+    </Node>
+    <Node ToolID="201">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.ExpectEqual.ExpectEqual">
+        <Position x="1122" y="114" />
+      </GuiSettings>
+      <Properties>
+        <Configuration />
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxExpectEqual" />
+    </Node>
+    <Node ToolID="152">
+      <GuiSettings Plugin="AlteryxGuiToolkit.ToolContainer.ToolContainer">
+        <Position x="56" y="1439" width="656" height="84" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Caption>Alteryx Educational Asset - Terms and Conditions</Caption>
+          <Style TextColor="#ffffff" FillColor="#4c6778" BorderColor="#00263e" Transparency="1" Margin="10" />
+          <Disabled value="False" />
+          <Folded value="False" />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <ChildNodes>
+        <Node ToolID="151">
+          <GuiSettings Plugin="AlteryxGuiToolkit.TextBox.TextBox">
+            <Position x="66" y="1473" width="636" height="40" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <Text>Use of this Alteryx asset is for educational purposes only and bound by the conditions set forth on alteryx.com/terms-and-conditions. Alteryx Information may not be reproduced, transmitted or distributed without Alteryx, Inc.'s permission.</Text>
+              <Font name="Corbel" size="8.25" style="0" />
+              <TextColor name="White" />
+              <FillColor name="White" />
+              <Shape shape="3" />
+              <Justification Justification="4" />
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+        </Node>
+      </ChildNodes>
+    </Node>
+    <Node ToolID="196">
+      <GuiSettings Plugin="AlteryxGuiToolkit.ToolContainer.ToolContainer">
+        <Position x="17" y="0" width="530" height="542" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Caption>Challenge 488</Caption>
+          <Style TextColor="#314c4a" FillColor="#ecf2f2" BorderColor="#314c4a" Transparency="25" Margin="25" />
+          <Disabled value="False" />
+          <Folded value="False" />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <AnnotationText>Challenge 488</AnnotationText>
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <ChildNodes>
+        <Node ToolID="195">
+          <GuiSettings Plugin="AlteryxGuiToolkit.TextBox.TextBox">
+            <Position x="42" y="49" width="480" height="468" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <Text>- Your first dataset contains the suit and suite names, and 
+- you second dataset contain the card values (2-10, J, Q, K, A).
+
+# Task 1: Build the Full Deck
+- Using the two datasets, generate a complete standard deck of 52 playing cards 
+  by combining all card values with each of the four suits.
+
+# Task 2: Develop an Alteryx App that:
+- Randomly shuffles the deck.
+- Prompts the user to input:
+  - The number of players (between 2 and 10)
+  - The number of cards to deal to each player (between 1 and 13)
+- Distributes cards accordingly:
+  - Each player receives the specified number of cards
+  - The remaining cards are placed in a separate draw pile (output dataset)
+
+## Notes:
+- You may assume that users will enter only valid combinations 
+  (i.e., the total number of cards dealt will not exceed 52).
+- A macro is available to shuffle the cards, if needed.
+
+# Task 3: Sort Each Player’s Hand by Custom Rules
+Implement custom sorting logic for each player's hand based on the following criteria:
+1. Suit Frequency: Suits with fewer cards in hand appear first.
+2. Lowest Card Tiebreaker: If two or more suits have the same number of cards,
+   the suit with the lowest-ranking card comes first.
+  - For example, a hand with 6♣-A♣ comes before Q♠-K♠ because 6 &lt; Q.
+3. Suit Priority: If the lowest cards are the same, use this suit priority as a final tiebreaker:
+  - Spades (♠), Hearts (♥), Diamonds (♦), Clubs (♣)
+
+## Example:
+For the hand K♦, 2♠, 6♠, 2♣, K♣:
+- Suits with 2 cards: Spades and Clubs
+- Both have a lowest card of 2
+- Suit priority applies: Spades come before Clubs
+Final order: 2♠, 6♠, 2♣, K♣, K♦</Text>
+              <Font name="Arial" size="8.25" style="0" />
+              <TextColor name="Black" />
+              <FillColor name="White" />
+              <Shape shape="0" />
+              <Justification Justification="3" />
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+        </Node>
+      </ChildNodes>
+    </Node>
+    <Node ToolID="203">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.DbFileInput.DbFileInput">
+        <Position x="582" y="522" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Passwords />
+          <File OutputFileName="" FileFormat="19" SearchSubDirs="False" RecordLimit="">..\local_input\C488_deck.yxdb</File>
+          <FormatSpecificOptions />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>C488_deck.yxdb</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+        <Dependencies>
+          <Implicit />
+        </Dependencies>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="Suit" size="1073741823" source="TextInput:" type="V_WString" />
+            <Field name="CardValueInt" source="TextInput:" type="Int32" />
+            <Field name="CardValue" size="2147483647" source="TextInput:" type="V_String" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxDbFileInput" />
+    </Node>
+    <Node ToolID="230">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.TextInput.TextInput">
+        <Position x="582" y="762" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <NumRows value="4" />
+          <Fields>
+            <Field name="Suit" />
+            <Field name="SuitPriority" />
+          </Fields>
+          <Data>
+            <r>
+              <c>♠</c>
+              <c>1</c>
+            </r>
+            <r>
+              <c>♥</c>
+              <c>2</c>
+            </r>
+            <r>
+              <c>♦</c>
+              <c>3</c>
+            </r>
+            <r>
+              <c>♣</c>
+              <c>4</c>
+            </r>
+          </Data>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <AnnotationText>Suits Priority</AnnotationText>
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="Suit" size="1073741823" source="TextInput:" type="V_WString" />
+            <Field name="SuitPriority" source="TextInput:" type="Int32" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxTextInput" />
+    </Node>
+    <Node ToolID="231">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Join.Join">
+        <Position x="690" y="750" />
+      </GuiSettings>
+      <Properties>
+        <Configuration joinByRecordPos="False">
+          <JoinInfo connection="Left">
+            <Field field="Suit" />
+          </JoinInfo>
+          <JoinInfo connection="Right">
+            <Field field="Suit" />
+          </JoinInfo>
+          <SelectConfiguration>
+            <Configuration outputConnection="Join">
+              <OrderChanged value="False" />
+              <CommaDecimal value="False" />
+              <SelectFields>
+                <SelectField field="Right_Suit" selected="False" rename="Right_Suit" input="Right_" />
+                <SelectField field="*Unknown" selected="True" />
+              </SelectFields>
+            </Configuration>
+          </SelectConfiguration>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Left">
+          <RecordInfo>
+            <Field name="RecordID" source="RecordID: Starting Value=1" type="Int32" />
+            <Field name="Suit" size="1073741823" source="TextInput:" type="V_WString" />
+            <Field name="CardValueInt" source="TextInput:" type="Int32" />
+            <Field name="CardValue" size="2147483647" source="TextInput:" type="V_String" />
+            <Field name="rand" source="Formula: RAND()" type="Double" />
+            <Field name="Card" size="1073741823" source="Formula: [CardValue] + [Suit]" type="V_WString" />
+            <Field name="Tile_Num" source="Tile" type="Int32" />
+            <Field name="Tile_SequenceNum" source="Tile" type="Int32" />
+            <Field name="Player" size="1073741823" source="Formula: &quot;Player &quot; + ToString([Tile_Num])" type="V_WString" />
+          </RecordInfo>
+        </MetaInfo>
+        <MetaInfo connection="Join">
+          <RecordInfo>
+            <Field name="RecordID" source="RecordID: Starting Value=1" type="Int32" />
+            <Field name="Suit" size="1073741823" source="TextInput:" type="V_WString" />
+            <Field name="CardValueInt" source="TextInput:" type="Int32" />
+            <Field name="CardValue" size="2147483647" source="TextInput:" type="V_String" />
+            <Field name="rand" source="Formula: RAND()" type="Double" />
+            <Field name="Card" size="1073741823" source="Formula: [CardValue] + [Suit]" type="V_WString" />
+            <Field name="Tile_Num" source="Tile" type="Int32" />
+            <Field name="Tile_SequenceNum" source="Tile" type="Int32" />
+            <Field name="Player" size="1073741823" source="Formula: &quot;Player &quot; + ToString([Tile_Num])" type="V_WString" />
+            <Field name="SuitPriority" source="TextInput:" type="Int32" />
+          </RecordInfo>
+        </MetaInfo>
+        <MetaInfo connection="Right">
+          <RecordInfo>
+            <Field name="Suit" size="1073741823" source="TextInput:" type="V_WString" />
+            <Field name="SuitPriority" source="TextInput:" type="Int32" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxJoin" />
+    </Node>
+    <Node ToolID="209">
+      <GuiSettings Plugin="AlteryxGuiToolkit.Questions.NumericUpDown.NumericUpDown">
+        <Position x="882" y="270" width="59" height="59" />
+      </GuiSettings>
+      <Properties>
+        <Configuration />
+        <Annotation DisplayMode="0">
+          <Name />
+          <AnnotationText>Number of Players</AnnotationText>
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+    </Node>
+    <Node ToolID="214">
+      <GuiSettings Plugin="AlteryxGuiToolkit.Action.Action">
+        <Position x="882" y="426" width="59" height="59" />
+      </GuiSettings>
+      <Properties>
+        <Configuration />
+        <Annotation DisplayMode="2">
+          <Name />
+          <AnnotationText>Update Value</AnnotationText>
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+    </Node>
+    <Node ToolID="210">
+      <GuiSettings Plugin="AlteryxGuiToolkit.Questions.NumericUpDown.NumericUpDown">
+        <Position x="1062" y="270" width="59" height="59" />
+      </GuiSettings>
+      <Properties>
+        <Configuration />
+        <Annotation DisplayMode="0">
+          <Name />
+          <AnnotationText>Number of Cards to Deal</AnnotationText>
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+    </Node>
+    <Node ToolID="215">
+      <GuiSettings Plugin="AlteryxGuiToolkit.Action.Action">
+        <Position x="1062" y="426" width="59" height="59" />
+      </GuiSettings>
+      <Properties>
+        <Configuration />
+        <Annotation DisplayMode="2">
+          <Name />
+          <AnnotationText>Update Value</AnnotationText>
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+    </Node>
+    <Node ToolID="218">
+      <GuiSettings Plugin="AlteryxGuiToolkit.Action.Action">
+        <Position x="1182" y="426" width="59" height="59" />
+      </GuiSettings>
+      <Properties>
+        <Configuration />
+        <Annotation DisplayMode="2">
+          <Name />
+          <AnnotationText>Update Value</AnnotationText>
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+    </Node>
+    <Node ToolID="222">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.DbFileOutput.DbFileOutput">
+        <Position x="1398" y="510" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <File MaxRecords="" FileFormat="19">C:\Users\yoshi\OneDrive\デスクトップ\alteryx_challenge\local_output\C488_draw_pile.yxdb</File>
+          <Passwords />
+          <Disable>False</Disable>
+          <FormatSpecificOptions>
+            <WriteCompatibleVersion>False</WriteCompatibleVersion>
+            <NoSpatialIndex>False</NoSpatialIndex>
+            <SaveSource>True</SaveSource>
+            <SuppressBlankFile>False</SuppressBlankFile>
+          </FormatSpecificOptions>
+          <MultiFile value="False" />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>C488_draw_pile.yxdb</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+        <Dependencies>
+          <Implicit />
+        </Dependencies>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxDbFileOutput" />
+    </Node>
+    <Node ToolID="223">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.DbFileOutput.DbFileOutput">
+        <Position x="1590" y="618" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <File MaxRecords="" FileFormat="19">C:\Users\yoshi\OneDrive\デスクトップ\alteryx_challenge\local_output\C488_players_hands.yxdb</File>
+          <Passwords />
+          <Disable>False</Disable>
+          <FormatSpecificOptions>
+            <WriteCompatibleVersion>False</WriteCompatibleVersion>
+            <NoSpatialIndex>False</NoSpatialIndex>
+            <SaveSource>True</SaveSource>
+            <SuppressBlankFile>False</SuppressBlankFile>
+          </FormatSpecificOptions>
+          <MultiFile value="False" />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>C488_players_hands.yxdb</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+        <Dependencies>
+          <Implicit />
+        </Dependencies>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxDbFileOutput" />
+    </Node>
+    <Node ToolID="232">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.DbFileOutput.DbFileOutput">
+        <Position x="1590" y="750" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <File MaxRecords="" FileFormat="19">C:\Users\yoshi\OneDrive\デスクトップ\alteryx_challenge\local_output\C488_cards_ordered.yxdb</File>
+          <Passwords />
+          <Disable>False</Disable>
+          <FormatSpecificOptions>
+            <WriteCompatibleVersion>False</WriteCompatibleVersion>
+            <NoSpatialIndex>False</NoSpatialIndex>
+            <SaveSource>True</SaveSource>
+            <SuppressBlankFile>False</SuppressBlankFile>
+          </FormatSpecificOptions>
+          <MultiFile value="False" />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>C488_cards_ordered.yxdb</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+        <Dependencies>
+          <Implicit />
+        </Dependencies>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxDbFileOutput" />
+    </Node>
+  </Nodes>
+  <Connections>
+    <Connection>
+      <Origin ToolID="204" Connection="Output" />
+      <Destination ToolID="206" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="206" Connection="Output" />
+      <Destination ToolID="212" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="212" Connection="Output" />
+      <Destination ToolID="213" Connection="Input" />
+    </Connection>
+    <Connection name="#2">
+      <Origin ToolID="214" Connection="Action" />
+      <Destination ToolID="213" Connection="Action" />
+    </Connection>
+    <Connection name="#3">
+      <Origin ToolID="215" Connection="Action" />
+      <Destination ToolID="213" Connection="Action" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="213" Connection="True" />
+      <Destination ToolID="216" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="213" Connection="False" />
+      <Destination ToolID="217" Connection="Input" />
+    </Connection>
+    <Connection name="#2">
+      <Origin ToolID="218" Connection="Action" />
+      <Destination ToolID="217" Connection="Action" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="216" Connection="Output" />
+      <Destination ToolID="222" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="217" Connection="Output" />
+      <Destination ToolID="219" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="219" Connection="Output" />
+      <Destination ToolID="220" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="219" Connection="Output" />
+      <Destination ToolID="231" Connection="Left" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="230" Connection="Output" />
+      <Destination ToolID="231" Connection="Right" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="220" Connection="Output" />
+      <Destination ToolID="221" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="221" Connection="Output" />
+      <Destination ToolID="223" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="226" Connection="Output" />
+      <Destination ToolID="229" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="228" Connection="Output" />
+      <Destination ToolID="226" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="229" Connection="Output" />
+      <Destination ToolID="233" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="233" Connection="Output" />
+      <Destination ToolID="234" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="234" Connection="Output" />
+      <Destination ToolID="236" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="235" Connection="Output" />
+      <Destination ToolID="237" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="236" Connection="Output" />
+      <Destination ToolID="235" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="237" Connection="Output" />
+      <Destination ToolID="232" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="1" Connection="Output" />
+      <Destination ToolID="199" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="150" Connection="Output" />
+      <Destination ToolID="197" Connection="Source" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="199" Connection="Output" />
+      <Destination ToolID="197" Connection="Targets" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="197" Connection="Output" />
+      <Destination ToolID="198" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="198" Connection="Output" />
+      <Destination ToolID="200" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="200" Connection="Output" />
+      <Destination ToolID="201" Connection="Actual" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="168" Connection="Output" />
+      <Destination ToolID="201" Connection="Expected" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="203" Connection="Output" />
+      <Destination ToolID="204" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="231" Connection="Join" />
+      <Destination ToolID="228" Connection="Input" />
+    </Connection>
+    <Connection name="#1">
+      <Origin ToolID="209" Connection="Question" />
+      <Destination ToolID="211" Connection="Question" />
+    </Connection>
+    <Connection name="#2">
+      <Origin ToolID="210" Connection="Question" />
+      <Destination ToolID="211" Connection="Question" />
+    </Connection>
+    <Connection name="#1">
+      <Origin ToolID="209" Connection="Question" />
+      <Destination ToolID="214" Connection="Question" />
+    </Connection>
+    <Connection name="#1">
+      <Origin ToolID="209" Connection="Question" />
+      <Destination ToolID="218" Connection="Question" />
+    </Connection>
+    <Connection name="#1">
+      <Origin ToolID="210" Connection="Question" />
+      <Destination ToolID="215" Connection="Question" />
+    </Connection>
+  </Connections>
+  <Properties>
+    <Memory default="True" />
+    <GlobalRecordLimit value="0" />
+    <TempFiles default="True" />
+    <Annotation on="True" includeToolName="False" />
+    <ConvErrorLimit value="10" />
+    <ConvErrorLimit_Stop value="False" />
+    <CancelOnError value="False" />
+    <DisableBrowse value="False" />
+    <EnablePerformanceProfiling value="False" />
+    <RunWithE2 value="True" />
+    <DefaultTZ value="Local" />
+    <SortedGrouping value="True" />
+    <PredictiveToolsCodePage value="1252" />
+    <DisableAllOutput value="False" />
+    <ShowAllMacroMessages value="False" />
+    <ShowConnectionStatusIsOn value="True" />
+    <ShowConnectionStatusOnlyWhenRunning value="True" />
+    <ZoomLevel value="-4" />
+    <LayoutType>Horizontal</LayoutType>
+    <IsTemplate value="False" />
+    <Constants>
+      <Constant>
+        <Namespace>Question</Namespace>
+        <Name>Numeric Up Down (209)</Name>
+        <Value />
+        <IsNumeric value="True" />
+      </Constant>
+      <Constant>
+        <Namespace>Question</Namespace>
+        <Name>Numeric Up Down (210)</Name>
+        <Value />
+        <IsNumeric value="True" />
+      </Constant>
+    </Constants>
+    <MetaInfo>
+      <NameIsFileName value="True" />
+      <Name>Challenge 488_yf</Name>
+      <Description />
+      <RootToolName />
+      <ToolVersion />
+      <ToolInDb value="False" />
+      <CategoryName />
+      <SearchTags />
+      <Author />
+      <Company />
+      <Copyright />
+      <DescriptionLink actual="" displayed="" />
+      <Example>
+        <Description />
+        <File />
+      </Example>
+      <WorkflowId value="f986d4aa-a3ef-4568-8a04-ac9ae7f1afda" />
+      <Telemetry>
+        <PreviousWorkflowId value="6bf67672-ae1c-4d8a-b792-160d6cbfe502" />
+        <OriginWorkflowId value="d5c92b64-5073-4198-9b68-35c9e4b8f72b" />
+      </Telemetry>
+      <PlatformWorkflowId value="" />
+    </MetaInfo>
+    <Events>
+      <Enabled value="True" />
+    </Events>
+    <RuntimeProperties>
+      <Actions>
+        <NoCondition>
+          <Type>NoCondition</Type>
+          <Description>(Always Run)</Description>
+          <True>
+            <Action>
+              <Type>Error</Type>
+              <Description>Exceeds the total number of cards(52).</Description>
+              <ToolId value="211" />
+              <Expression>ToNumber([#1]) * ToNumber([#2]) &gt; 52</Expression>
+            </Action>
+            <Action>
+              <Type>UpdateValue</Type>
+              <Description />
+              <ToolId value="214" />
+              <Mode>Simple</Mode>
+              <Variable />
+              <Replace value="True" />
+              <ReplaceText>8</ReplaceText>
+              <Destination>213/Expression</Destination>
+            </Action>
+            <Action>
+              <Type>UpdateValue</Type>
+              <Description />
+              <ToolId value="215" />
+              <Mode>Simple</Mode>
+              <Variable />
+              <Replace value="True" />
+              <ReplaceText>6</ReplaceText>
+              <Destination>213/Expression</Destination>
+            </Action>
+            <Action>
+              <Type>UpdateValue</Type>
+              <Description />
+              <ToolId value="218" />
+              <Mode>Simple</Mode>
+              <Variable />
+              <Replace value="False" />
+              <Destination>217/EqualRecords/NumTiles/@value</Destination>
+            </Action>
+          </True>
+        </NoCondition>
+      </Actions>
+      <Questions>
+        <Question>
+          <Type>Tab</Type>
+          <Description>Questions</Description>
+          <Name>Tab (208)</Name>
+          <ToolId value="208" />
+          <Questions>
+            <Question>
+              <Type>NumericUpDown</Type>
+              <Description>Number of Players</Description>
+              <Name>Numeric Up Down (209)</Name>
+              <ToolId value="209" />
+              <Minimum value="2" />
+              <Maximum value="10" />
+              <Increment value="1" />
+              <Default value="8" />
+              <Decimals value="0" />
+            </Question>
+            <Question>
+              <Type>NumericUpDown</Type>
+              <Description>Number of Cards to Deal</Description>
+              <Name>Numeric Up Down (210)</Name>
+              <ToolId value="210" />
+              <Minimum value="1" />
+              <Maximum value="13" />
+              <Increment value="1" />
+              <Default value="6" />
+              <Decimals value="0" />
+            </Question>
+          </Questions>
+        </Question>
+      </Questions>
+      <ModuleType>Wizard</ModuleType>
+      <MacroCustomHelp value="False" />
+      <MacroDynamicOutputFields value="False" />
+      <MacroImageStd value="0" />
+      <MacroInputs />
+      <MacroOutputs />
+      <Wiz_CustomHelp value="False" />
+      <Wiz_CustomGraphic value="False" />
+      <Wiz_ShowOutput value="True" />
+      <Wiz_OpenOutputTools>
+        <Tool ToolId="201" Selected="False" />
+        <Tool ToolId="222" Selected="True" />
+        <Tool ToolId="223" Selected="True" />
+        <Tool ToolId="232" Selected="True" />
+      </Wiz_OpenOutputTools>
+      <Wiz_OutputMessage />
+      <Wiz_NoOutputFilesMessage />
+      <Wiz_ChainRunWizard />
+    </RuntimeProperties>
+  </Properties>
+</AlteryxDocument>
