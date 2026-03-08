@@ -1,9 +1,9 @@
 <?xml version="1.0"?>
-<AlteryxDocument yxmdVer="2025.2">
+<AlteryxDocument yxmdVer="2025.2" RunE2="T">
   <Nodes>
     <Node ToolID="1">
       <GuiSettings Plugin="AlteryxBasePluginsGui.TextInput.TextInput">
-        <Position x="581" y="9" />
+        <Position x="582" y="18" />
       </GuiSettings>
       <Properties>
         <Configuration>
@@ -108,19 +108,515 @@
         </Configuration>
         <Annotation DisplayMode="0">
           <Name />
+          <AnnotationText>Card Value</AnnotationText>
           <DefaultAnnotationText />
           <Left value="False" />
         </Annotation>
       </Properties>
       <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxTextInput" />
     </Node>
-    <Node ToolID="164">
-      <GuiSettings Plugin="AlteryxBasePluginsGui.BrowseV2.BrowseV2">
-        <Position x="702" y="9" />
+    <Node ToolID="197">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.AppendFields.AppendFields">
+        <Position x="774" y="114" />
       </GuiSettings>
       <Properties>
         <Configuration>
-          <TempFile>C:\ProgramData\Alteryx\Engine\Engine_40964_176556ee6123447888c929df66cc62df_\Engine_39524_707e3c84ac2c4349896e92dede12581b_.yxdb</TempFile>
+          <CartesianMode>Error</CartesianMode>
+          <SelectConfiguration>
+            <Configuration outputConnection="Output">
+              <OrderChanged value="False" />
+              <CommaDecimal value="False" />
+              <SelectFields>
+                <SelectField field="Target_SuitName" selected="False" input="Target_" />
+                <SelectField field="*Unknown" selected="True" />
+              </SelectFields>
+            </Configuration>
+          </SelectConfiguration>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxAppendFields" />
+    </Node>
+    <Node ToolID="198">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Sort.Sort">
+        <Position x="870" y="114" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <SortInfo locale="1033">
+            <Field field="SuitPriority" order="Ascending" />
+            <Field field="CardValueInt" order="Ascending" />
+          </SortInfo>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>SuitPriority - Ascending
+CardValueInt - Ascending</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxSort" />
+    </Node>
+    <Node ToolID="199">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.RecordID.RecordID">
+        <Position x="678" y="18" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <FieldName>SuitPriority</FieldName>
+          <StartValue>1</StartValue>
+          <FieldType>Int32</FieldType>
+          <FieldSize>6</FieldSize>
+          <Position>0</Position>
+          <GroupFields orderChanged="False" />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxRecordID" />
+    </Node>
+    <Node ToolID="200">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.AlteryxSelect.AlteryxSelect">
+        <Position x="966" y="114" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <OrderChanged value="False" />
+          <CommaDecimal value="False" />
+          <SelectFields>
+            <SelectField field="SuitPriority" selected="False" />
+            <SelectField field="*Unknown" selected="True" />
+          </SelectFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxSelect" />
+    </Node>
+    <Node ToolID="168">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.TextInput.TextInput">
+        <Position x="966" y="18" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <NumRows value="52" />
+          <Fields>
+            <Field name="Suit" />
+            <Field name="CardValueInt" />
+            <Field name="CardValue" />
+          </Fields>
+          <Data>
+            <r>
+              <c>♠</c>
+              <c>2</c>
+              <c>2</c>
+            </r>
+            <r>
+              <c>♠</c>
+              <c>3</c>
+              <c>3</c>
+            </r>
+            <r>
+              <c>♠</c>
+              <c>4</c>
+              <c>4</c>
+            </r>
+            <r>
+              <c>♠</c>
+              <c>5</c>
+              <c>5</c>
+            </r>
+            <r>
+              <c>♠</c>
+              <c>6</c>
+              <c>6</c>
+            </r>
+            <r>
+              <c>♠</c>
+              <c>7</c>
+              <c>7</c>
+            </r>
+            <r>
+              <c>♠</c>
+              <c>8</c>
+              <c>8</c>
+            </r>
+            <r>
+              <c>♠</c>
+              <c>9</c>
+              <c>9</c>
+            </r>
+            <r>
+              <c>♠</c>
+              <c>10</c>
+              <c>10</c>
+            </r>
+            <r>
+              <c>♠</c>
+              <c>11</c>
+              <c>J</c>
+            </r>
+            <r>
+              <c>♠</c>
+              <c>12</c>
+              <c>Q</c>
+            </r>
+            <r>
+              <c>♠</c>
+              <c>13</c>
+              <c>K</c>
+            </r>
+            <r>
+              <c>♠</c>
+              <c>14</c>
+              <c>A</c>
+            </r>
+            <r>
+              <c>♥</c>
+              <c>2</c>
+              <c>2</c>
+            </r>
+            <r>
+              <c>♥</c>
+              <c>3</c>
+              <c>3</c>
+            </r>
+            <r>
+              <c>♥</c>
+              <c>4</c>
+              <c>4</c>
+            </r>
+            <r>
+              <c>♥</c>
+              <c>5</c>
+              <c>5</c>
+            </r>
+            <r>
+              <c>♥</c>
+              <c>6</c>
+              <c>6</c>
+            </r>
+            <r>
+              <c>♥</c>
+              <c>7</c>
+              <c>7</c>
+            </r>
+            <r>
+              <c>♥</c>
+              <c>8</c>
+              <c>8</c>
+            </r>
+            <r>
+              <c>♥</c>
+              <c>9</c>
+              <c>9</c>
+            </r>
+            <r>
+              <c>♥</c>
+              <c>10</c>
+              <c>10</c>
+            </r>
+            <r>
+              <c>♥</c>
+              <c>11</c>
+              <c>J</c>
+            </r>
+            <r>
+              <c>♥</c>
+              <c>12</c>
+              <c>Q</c>
+            </r>
+            <r>
+              <c>♥</c>
+              <c>13</c>
+              <c>K</c>
+            </r>
+            <r>
+              <c>♥</c>
+              <c>14</c>
+              <c>A</c>
+            </r>
+            <r>
+              <c>♦</c>
+              <c>2</c>
+              <c>2</c>
+            </r>
+            <r>
+              <c>♦</c>
+              <c>3</c>
+              <c>3</c>
+            </r>
+            <r>
+              <c>♦</c>
+              <c>4</c>
+              <c>4</c>
+            </r>
+            <r>
+              <c>♦</c>
+              <c>5</c>
+              <c>5</c>
+            </r>
+            <r>
+              <c>♦</c>
+              <c>6</c>
+              <c>6</c>
+            </r>
+            <r>
+              <c>♦</c>
+              <c>7</c>
+              <c>7</c>
+            </r>
+            <r>
+              <c>♦</c>
+              <c>8</c>
+              <c>8</c>
+            </r>
+            <r>
+              <c>♦</c>
+              <c>9</c>
+              <c>9</c>
+            </r>
+            <r>
+              <c>♦</c>
+              <c>10</c>
+              <c>10</c>
+            </r>
+            <r>
+              <c>♦</c>
+              <c>11</c>
+              <c>J</c>
+            </r>
+            <r>
+              <c>♦</c>
+              <c>12</c>
+              <c>Q</c>
+            </r>
+            <r>
+              <c>♦</c>
+              <c>13</c>
+              <c>K</c>
+            </r>
+            <r>
+              <c>♦</c>
+              <c>14</c>
+              <c>A</c>
+            </r>
+            <r>
+              <c>♣</c>
+              <c>2</c>
+              <c>2</c>
+            </r>
+            <r>
+              <c>♣</c>
+              <c>3</c>
+              <c>3</c>
+            </r>
+            <r>
+              <c>♣</c>
+              <c>4</c>
+              <c>4</c>
+            </r>
+            <r>
+              <c>♣</c>
+              <c>5</c>
+              <c>5</c>
+            </r>
+            <r>
+              <c>♣</c>
+              <c>6</c>
+              <c>6</c>
+            </r>
+            <r>
+              <c>♣</c>
+              <c>7</c>
+              <c>7</c>
+            </r>
+            <r>
+              <c>♣</c>
+              <c>8</c>
+              <c>8</c>
+            </r>
+            <r>
+              <c>♣</c>
+              <c>9</c>
+              <c>9</c>
+            </r>
+            <r>
+              <c>♣</c>
+              <c>10</c>
+              <c>10</c>
+            </r>
+            <r>
+              <c>♣</c>
+              <c>11</c>
+              <c>J</c>
+            </r>
+            <r>
+              <c>♣</c>
+              <c>12</c>
+              <c>Q</c>
+            </r>
+            <r>
+              <c>♣</c>
+              <c>13</c>
+              <c>K</c>
+            </r>
+            <r>
+              <c>♣</c>
+              <c>14</c>
+              <c>A</c>
+            </r>
+          </Data>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <AnnotationText>Task 1: Complete Deck</AnnotationText>
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxTextInput" />
+    </Node>
+    <Node ToolID="169">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.TextInput.TextInput">
+        <Position x="1033" y="263" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <NumRows value="4" />
+          <Fields>
+            <Field name="Card" />
+          </Fields>
+          <Data>
+            <r>
+              <c>3♠</c>
+            </r>
+            <r>
+              <c>8♣</c>
+            </r>
+            <r>
+              <c>K♠</c>
+            </r>
+            <r>
+              <c>6♣</c>
+            </r>
+          </Data>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <AnnotationText>Task 2: Draw Pile (answers may vary depending on the random shuffle)</AnnotationText>
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxTextInput" />
+    </Node>
+    <Node ToolID="170">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.TextInput.TextInput">
+        <Position x="1034" y="593" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <NumRows value="6" />
+          <Fields>
+            <Field name="Player 1" />
+            <Field name="Player 2" />
+            <Field name="Player 3" />
+            <Field name="Player 4" />
+            <Field name="Player 5" />
+            <Field name="Player 6" />
+            <Field name="Player 7" />
+            <Field name="Player 8" />
+          </Fields>
+          <Data>
+            <r>
+              <c>7♦</c>
+              <c>5♥</c>
+              <c>7♥</c>
+              <c>9♥</c>
+              <c>2♥</c>
+              <c>J♥</c>
+              <c>10♠</c>
+              <c>8♥</c>
+            </r>
+            <r>
+              <c>10♥</c>
+              <c>K♥</c>
+              <c>Q♦</c>
+              <c>3♣</c>
+              <c>5♦</c>
+              <c>J♣</c>
+              <c>8♦</c>
+              <c>4♦</c>
+            </r>
+            <r>
+              <c>Q♥</c>
+              <c>A♥</c>
+              <c>2♠</c>
+              <c>A♣</c>
+              <c>6♦</c>
+              <c>2♦</c>
+              <c>10♦</c>
+              <c>9♦</c>
+            </r>
+            <r>
+              <c>4♣</c>
+              <c>9♠</c>
+              <c>7♠</c>
+              <c>3♦</c>
+              <c>4♠</c>
+              <c>J♦</c>
+              <c>3♥</c>
+              <c>5♣</c>
+            </r>
+            <r>
+              <c>9♣</c>
+              <c>J♠</c>
+              <c>2♣</c>
+              <c>K♦</c>
+              <c>5♠</c>
+              <c>8♠</c>
+              <c>4♥</c>
+              <c>7♣</c>
+            </r>
+            <r>
+              <c>10♣</c>
+              <c>Q♠</c>
+              <c>K♣</c>
+              <c>A♦</c>
+              <c>6♠</c>
+              <c>A♠</c>
+              <c>6♥</c>
+              <c>Q♣</c>
+            </r>
+          </Data>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <AnnotationText>Task 3: Cards Ordered</AnnotationText>
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxTextInput" />
+    </Node>
+    <Node ToolID="172">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.BrowseV2.BrowseV2">
+        <Position x="1154" y="263" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <TempFile>C:\Users\yoshi\AppData\Local\Temp\Alteryx\Engine_22348_d0fa2a05fd6847d899d0a01f25d7f157_\Engine_22348_12a2f236ba13419f993681014d162aae~.yxdb</TempFile>
           <Layout>
             <View1>
               <Hints>
@@ -137,19 +633,24 @@
       </Properties>
       <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxBrowseV2" />
     </Node>
-    <Node ToolID="165">
+    <Node ToolID="173">
       <GuiSettings Plugin="AlteryxBasePluginsGui.BrowseV2.BrowseV2">
-        <Position x="702" y="130" />
+        <Position x="1144" y="593" />
       </GuiSettings>
       <Properties>
         <Configuration>
-          <TempFile>C:\ProgramData\Alteryx\Engine\Engine_40964_176556ee6123447888c929df66cc62df_\Engine_39524_d5ea52770f7048eb9e238b86cc8925db_.yxdb</TempFile>
+          <TempFile>C:\Users\yoshi\AppData\Local\Temp\Alteryx\Engine_22348_d0fa2a05fd6847d899d0a01f25d7f157_\Engine_22348_7b731a0956fa42769cddcb3853d61db7~.yxdb</TempFile>
+          <TempFileDataProfiling />
           <Layout>
+            <ViewMode>Single</ViewMode>
+            <ViewSize value="100" />
             <View1>
+              <DefaultTab>Profile</DefaultTab>
               <Hints>
                 <Table />
               </Hints>
             </View1>
+            <View2 />
           </Layout>
         </Configuration>
         <Annotation DisplayMode="0">
@@ -159,6 +660,125 @@
         </Annotation>
       </Properties>
       <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxBrowseV2" />
+    </Node>
+    <Node ToolID="193">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.TextInput.TextInput">
+        <Position x="1034" y="406" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <NumRows value="6" />
+          <Fields>
+            <Field name="Player 1" />
+            <Field name="Player 2" />
+            <Field name="Player 3" />
+            <Field name="Player 4" />
+            <Field name="Player 5" />
+            <Field name="Player 6" />
+            <Field name="Player 7" />
+            <Field name="Player 8" />
+          </Fields>
+          <Data>
+            <r>
+              <c>K♠</c>
+              <c>6♦</c>
+              <c>5♣</c>
+              <c>J♥</c>
+              <c>8♥</c>
+              <c>9♣</c>
+              <c>K♣</c>
+              <c>9♦</c>
+            </r>
+            <r>
+              <c>J♠</c>
+              <c>5♦</c>
+              <c>Q♦</c>
+              <c>3♦</c>
+              <c>10♦</c>
+              <c>K♦</c>
+              <c>A♠</c>
+              <c>6♠</c>
+            </r>
+            <r>
+              <c>10♠</c>
+              <c>Q♠</c>
+              <c>4♥</c>
+              <c>J♦</c>
+              <c>8♣</c>
+              <c>3♠</c>
+              <c>7♥</c>
+              <c>Q♥</c>
+            </r>
+            <r>
+              <c>2♠</c>
+              <c>6♣</c>
+              <c>A♥</c>
+              <c>3♥</c>
+              <c>2♣</c>
+              <c>8♠</c>
+              <c>5♠</c>
+              <c>2♥</c>
+            </r>
+            <r>
+              <c>2♦</c>
+              <c>9♠</c>
+              <c>3♣</c>
+              <c>6♥</c>
+              <c>A♦</c>
+              <c>7♣</c>
+              <c>4♦</c>
+              <c>7♦</c>
+            </r>
+            <r>
+              <c>Q♣</c>
+              <c>4♠</c>
+              <c>9♥</c>
+              <c>10♥</c>
+              <c>8♦</c>
+              <c>J♣</c>
+              <c>4♣</c>
+              <c>7♠</c>
+            </r>
+          </Data>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <AnnotationText>Task 2: Players' Hands - Cards Unordered (answers may vary depending on the random shuffle)</AnnotationText>
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxTextInput" />
+    </Node>
+    <Node ToolID="194">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.BrowseV2.BrowseV2">
+        <Position x="1155" y="406" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <TempFile>C:\Users\yoshi\AppData\Local\Temp\Alteryx\Engine_22348_d0fa2a05fd6847d899d0a01f25d7f157_\Engine_22348_21b0d8abcf924e9bacb1f20b99932500~.yxdb</TempFile>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxBrowseV2" />
+    </Node>
+    <Node ToolID="201">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.ExpectEqual.ExpectEqual">
+        <Position x="1074" y="102" />
+      </GuiSettings>
+      <Properties>
+        <Configuration />
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxExpectEqual" />
     </Node>
     <Node ToolID="152">
       <GuiSettings Plugin="AlteryxGuiToolkit.ToolContainer.ToolContainer">
@@ -197,615 +817,6 @@
               <Left value="False" />
             </Annotation>
           </Properties>
-        </Node>
-      </ChildNodes>
-    </Node>
-    <Node ToolID="159">
-      <GuiSettings Plugin="AlteryxGuiToolkit.ToolContainer.ToolContainer">
-        <Position x="1023" y="102" width="201" height="592" />
-      </GuiSettings>
-      <Properties>
-        <Configuration>
-          <Caption>Output
-Solution</Caption>
-          <Style TextColor="#314c4a" FillColor="#ffffff" BorderColor="#cdd7da" Transparency="25" Margin="10" />
-          <Disabled value="False" />
-          <Folded value="False" />
-        </Configuration>
-        <Annotation DisplayMode="0">
-          <Name />
-          <AnnotationText>Output
-Solution</AnnotationText>
-          <DefaultAnnotationText />
-          <Left value="False" />
-        </Annotation>
-      </Properties>
-      <ChildNodes>
-        <Node ToolID="168">
-          <GuiSettings Plugin="AlteryxBasePluginsGui.TextInput.TextInput">
-            <Position x="1033" y="153" />
-          </GuiSettings>
-          <Properties>
-            <Configuration>
-              <NumRows value="52" />
-              <Fields>
-                <Field name="Suit" />
-                <Field name="CardValueInt" />
-                <Field name="CardValue" />
-              </Fields>
-              <Data>
-                <r>
-                  <c>♠</c>
-                  <c>2</c>
-                  <c>2</c>
-                </r>
-                <r>
-                  <c>♠</c>
-                  <c>3</c>
-                  <c>3</c>
-                </r>
-                <r>
-                  <c>♠</c>
-                  <c>4</c>
-                  <c>4</c>
-                </r>
-                <r>
-                  <c>♠</c>
-                  <c>5</c>
-                  <c>5</c>
-                </r>
-                <r>
-                  <c>♠</c>
-                  <c>6</c>
-                  <c>6</c>
-                </r>
-                <r>
-                  <c>♠</c>
-                  <c>7</c>
-                  <c>7</c>
-                </r>
-                <r>
-                  <c>♠</c>
-                  <c>8</c>
-                  <c>8</c>
-                </r>
-                <r>
-                  <c>♠</c>
-                  <c>9</c>
-                  <c>9</c>
-                </r>
-                <r>
-                  <c>♠</c>
-                  <c>10</c>
-                  <c>10</c>
-                </r>
-                <r>
-                  <c>♠</c>
-                  <c>11</c>
-                  <c>J</c>
-                </r>
-                <r>
-                  <c>♠</c>
-                  <c>12</c>
-                  <c>Q</c>
-                </r>
-                <r>
-                  <c>♠</c>
-                  <c>13</c>
-                  <c>K</c>
-                </r>
-                <r>
-                  <c>♠</c>
-                  <c>14</c>
-                  <c>A</c>
-                </r>
-                <r>
-                  <c>♥</c>
-                  <c>2</c>
-                  <c>2</c>
-                </r>
-                <r>
-                  <c>♥</c>
-                  <c>3</c>
-                  <c>3</c>
-                </r>
-                <r>
-                  <c>♥</c>
-                  <c>4</c>
-                  <c>4</c>
-                </r>
-                <r>
-                  <c>♥</c>
-                  <c>5</c>
-                  <c>5</c>
-                </r>
-                <r>
-                  <c>♥</c>
-                  <c>6</c>
-                  <c>6</c>
-                </r>
-                <r>
-                  <c>♥</c>
-                  <c>7</c>
-                  <c>7</c>
-                </r>
-                <r>
-                  <c>♥</c>
-                  <c>8</c>
-                  <c>8</c>
-                </r>
-                <r>
-                  <c>♥</c>
-                  <c>9</c>
-                  <c>9</c>
-                </r>
-                <r>
-                  <c>♥</c>
-                  <c>10</c>
-                  <c>10</c>
-                </r>
-                <r>
-                  <c>♥</c>
-                  <c>11</c>
-                  <c>J</c>
-                </r>
-                <r>
-                  <c>♥</c>
-                  <c>12</c>
-                  <c>Q</c>
-                </r>
-                <r>
-                  <c>♥</c>
-                  <c>13</c>
-                  <c>K</c>
-                </r>
-                <r>
-                  <c>♥</c>
-                  <c>14</c>
-                  <c>A</c>
-                </r>
-                <r>
-                  <c>♦</c>
-                  <c>2</c>
-                  <c>2</c>
-                </r>
-                <r>
-                  <c>♦</c>
-                  <c>3</c>
-                  <c>3</c>
-                </r>
-                <r>
-                  <c>♦</c>
-                  <c>4</c>
-                  <c>4</c>
-                </r>
-                <r>
-                  <c>♦</c>
-                  <c>5</c>
-                  <c>5</c>
-                </r>
-                <r>
-                  <c>♦</c>
-                  <c>6</c>
-                  <c>6</c>
-                </r>
-                <r>
-                  <c>♦</c>
-                  <c>7</c>
-                  <c>7</c>
-                </r>
-                <r>
-                  <c>♦</c>
-                  <c>8</c>
-                  <c>8</c>
-                </r>
-                <r>
-                  <c>♦</c>
-                  <c>9</c>
-                  <c>9</c>
-                </r>
-                <r>
-                  <c>♦</c>
-                  <c>10</c>
-                  <c>10</c>
-                </r>
-                <r>
-                  <c>♦</c>
-                  <c>11</c>
-                  <c>J</c>
-                </r>
-                <r>
-                  <c>♦</c>
-                  <c>12</c>
-                  <c>Q</c>
-                </r>
-                <r>
-                  <c>♦</c>
-                  <c>13</c>
-                  <c>K</c>
-                </r>
-                <r>
-                  <c>♦</c>
-                  <c>14</c>
-                  <c>A</c>
-                </r>
-                <r>
-                  <c>♣</c>
-                  <c>2</c>
-                  <c>2</c>
-                </r>
-                <r>
-                  <c>♣</c>
-                  <c>3</c>
-                  <c>3</c>
-                </r>
-                <r>
-                  <c>♣</c>
-                  <c>4</c>
-                  <c>4</c>
-                </r>
-                <r>
-                  <c>♣</c>
-                  <c>5</c>
-                  <c>5</c>
-                </r>
-                <r>
-                  <c>♣</c>
-                  <c>6</c>
-                  <c>6</c>
-                </r>
-                <r>
-                  <c>♣</c>
-                  <c>7</c>
-                  <c>7</c>
-                </r>
-                <r>
-                  <c>♣</c>
-                  <c>8</c>
-                  <c>8</c>
-                </r>
-                <r>
-                  <c>♣</c>
-                  <c>9</c>
-                  <c>9</c>
-                </r>
-                <r>
-                  <c>♣</c>
-                  <c>10</c>
-                  <c>10</c>
-                </r>
-                <r>
-                  <c>♣</c>
-                  <c>11</c>
-                  <c>J</c>
-                </r>
-                <r>
-                  <c>♣</c>
-                  <c>12</c>
-                  <c>Q</c>
-                </r>
-                <r>
-                  <c>♣</c>
-                  <c>13</c>
-                  <c>K</c>
-                </r>
-                <r>
-                  <c>♣</c>
-                  <c>14</c>
-                  <c>A</c>
-                </r>
-              </Data>
-            </Configuration>
-            <Annotation DisplayMode="0">
-              <Name />
-              <AnnotationText>Task 1: Complete Deck</AnnotationText>
-              <DefaultAnnotationText />
-              <Left value="False" />
-            </Annotation>
-          </Properties>
-          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxTextInput" />
-        </Node>
-        <Node ToolID="169">
-          <GuiSettings Plugin="AlteryxBasePluginsGui.TextInput.TextInput">
-            <Position x="1033" y="263" />
-          </GuiSettings>
-          <Properties>
-            <Configuration>
-              <NumRows value="4" />
-              <Fields>
-                <Field name="Card" />
-              </Fields>
-              <Data>
-                <r>
-                  <c>3♠</c>
-                </r>
-                <r>
-                  <c>8♣</c>
-                </r>
-                <r>
-                  <c>K♠</c>
-                </r>
-                <r>
-                  <c>6♣</c>
-                </r>
-              </Data>
-            </Configuration>
-            <Annotation DisplayMode="0">
-              <Name />
-              <AnnotationText>Task 2: Draw Pile (answers may vary depending on the random shuffle)</AnnotationText>
-              <DefaultAnnotationText />
-              <Left value="False" />
-            </Annotation>
-          </Properties>
-          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxTextInput" />
-        </Node>
-        <Node ToolID="170">
-          <GuiSettings Plugin="AlteryxBasePluginsGui.TextInput.TextInput">
-            <Position x="1034" y="593" />
-          </GuiSettings>
-          <Properties>
-            <Configuration>
-              <NumRows value="6" />
-              <Fields>
-                <Field name="Player 1" />
-                <Field name="Player 2" />
-                <Field name="Player 3" />
-                <Field name="Player 4" />
-                <Field name="Player 5" />
-                <Field name="Player 6" />
-                <Field name="Player 7" />
-                <Field name="Player 8" />
-              </Fields>
-              <Data>
-                <r>
-                  <c>7♦</c>
-                  <c>5♥</c>
-                  <c>7♥</c>
-                  <c>9♥</c>
-                  <c>2♥</c>
-                  <c>J♥</c>
-                  <c>10♠</c>
-                  <c>8♥</c>
-                </r>
-                <r>
-                  <c>10♥</c>
-                  <c>K♥</c>
-                  <c>Q♦</c>
-                  <c>3♣</c>
-                  <c>5♦</c>
-                  <c>J♣</c>
-                  <c>8♦</c>
-                  <c>4♦</c>
-                </r>
-                <r>
-                  <c>Q♥</c>
-                  <c>A♥</c>
-                  <c>2♠</c>
-                  <c>A♣</c>
-                  <c>6♦</c>
-                  <c>2♦</c>
-                  <c>10♦</c>
-                  <c>9♦</c>
-                </r>
-                <r>
-                  <c>4♣</c>
-                  <c>9♠</c>
-                  <c>7♠</c>
-                  <c>3♦</c>
-                  <c>4♠</c>
-                  <c>J♦</c>
-                  <c>3♥</c>
-                  <c>5♣</c>
-                </r>
-                <r>
-                  <c>9♣</c>
-                  <c>J♠</c>
-                  <c>2♣</c>
-                  <c>K♦</c>
-                  <c>5♠</c>
-                  <c>8♠</c>
-                  <c>4♥</c>
-                  <c>7♣</c>
-                </r>
-                <r>
-                  <c>10♣</c>
-                  <c>Q♠</c>
-                  <c>K♣</c>
-                  <c>A♦</c>
-                  <c>6♠</c>
-                  <c>A♠</c>
-                  <c>6♥</c>
-                  <c>Q♣</c>
-                </r>
-              </Data>
-            </Configuration>
-            <Annotation DisplayMode="0">
-              <Name />
-              <AnnotationText>Task 3: Cards Ordered</AnnotationText>
-              <DefaultAnnotationText />
-              <Left value="False" />
-            </Annotation>
-          </Properties>
-          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxTextInput" />
-        </Node>
-        <Node ToolID="171">
-          <GuiSettings Plugin="AlteryxBasePluginsGui.BrowseV2.BrowseV2">
-            <Position x="1154" y="152" />
-          </GuiSettings>
-          <Properties>
-            <Configuration>
-              <TempFile>C:\ProgramData\Alteryx\Engine\Engine_40964_176556ee6123447888c929df66cc62df_\Engine_39524_bb53d31066db44c29f3a5f6844de18f9_.yxdb</TempFile>
-              <Layout>
-                <View1>
-                  <Hints>
-                    <Table />
-                  </Hints>
-                </View1>
-              </Layout>
-            </Configuration>
-            <Annotation DisplayMode="0">
-              <Name />
-              <DefaultAnnotationText />
-              <Left value="False" />
-            </Annotation>
-          </Properties>
-          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxBrowseV2" />
-        </Node>
-        <Node ToolID="172">
-          <GuiSettings Plugin="AlteryxBasePluginsGui.BrowseV2.BrowseV2">
-            <Position x="1154" y="263" />
-          </GuiSettings>
-          <Properties>
-            <Configuration>
-              <TempFile>C:\ProgramData\Alteryx\Engine\Engine_40964_176556ee6123447888c929df66cc62df_\Engine_39524_0c2818ad220147c3bd985d0a3515b3a6_.yxdb</TempFile>
-              <Layout>
-                <View1>
-                  <Hints>
-                    <Table />
-                  </Hints>
-                </View1>
-              </Layout>
-            </Configuration>
-            <Annotation DisplayMode="0">
-              <Name />
-              <DefaultAnnotationText />
-              <Left value="False" />
-            </Annotation>
-          </Properties>
-          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxBrowseV2" />
-        </Node>
-        <Node ToolID="173">
-          <GuiSettings Plugin="AlteryxBasePluginsGui.BrowseV2.BrowseV2">
-            <Position x="1144" y="593" />
-          </GuiSettings>
-          <Properties>
-            <Configuration>
-              <TempFile>C:\ProgramData\Alteryx\Engine\Engine_40964_176556ee6123447888c929df66cc62df_\Engine_39524_21d1a9ca24734d5ca4afcd6d71987b5e_.yxdb</TempFile>
-              <TempFileDataProfiling />
-              <Layout>
-                <ViewMode>Single</ViewMode>
-                <ViewSize value="100" />
-                <View1>
-                  <DefaultTab>Profile</DefaultTab>
-                  <Hints>
-                    <Table />
-                  </Hints>
-                </View1>
-                <View2 />
-              </Layout>
-            </Configuration>
-            <Annotation DisplayMode="0">
-              <Name />
-              <DefaultAnnotationText />
-              <Left value="False" />
-            </Annotation>
-          </Properties>
-          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxBrowseV2" />
-        </Node>
-        <Node ToolID="193">
-          <GuiSettings Plugin="AlteryxBasePluginsGui.TextInput.TextInput">
-            <Position x="1034" y="406" />
-          </GuiSettings>
-          <Properties>
-            <Configuration>
-              <NumRows value="6" />
-              <Fields>
-                <Field name="Player 1" />
-                <Field name="Player 2" />
-                <Field name="Player 3" />
-                <Field name="Player 4" />
-                <Field name="Player 5" />
-                <Field name="Player 6" />
-                <Field name="Player 7" />
-                <Field name="Player 8" />
-              </Fields>
-              <Data>
-                <r>
-                  <c>K♠</c>
-                  <c>6♦</c>
-                  <c>5♣</c>
-                  <c>J♥</c>
-                  <c>8♥</c>
-                  <c>9♣</c>
-                  <c>K♣</c>
-                  <c>9♦</c>
-                </r>
-                <r>
-                  <c>J♠</c>
-                  <c>5♦</c>
-                  <c>Q♦</c>
-                  <c>3♦</c>
-                  <c>10♦</c>
-                  <c>K♦</c>
-                  <c>A♠</c>
-                  <c>6♠</c>
-                </r>
-                <r>
-                  <c>10♠</c>
-                  <c>Q♠</c>
-                  <c>4♥</c>
-                  <c>J♦</c>
-                  <c>8♣</c>
-                  <c>3♠</c>
-                  <c>7♥</c>
-                  <c>Q♥</c>
-                </r>
-                <r>
-                  <c>2♠</c>
-                  <c>6♣</c>
-                  <c>A♥</c>
-                  <c>3♥</c>
-                  <c>2♣</c>
-                  <c>8♠</c>
-                  <c>5♠</c>
-                  <c>2♥</c>
-                </r>
-                <r>
-                  <c>2♦</c>
-                  <c>9♠</c>
-                  <c>3♣</c>
-                  <c>6♥</c>
-                  <c>A♦</c>
-                  <c>7♣</c>
-                  <c>4♦</c>
-                  <c>7♦</c>
-                </r>
-                <r>
-                  <c>Q♣</c>
-                  <c>4♠</c>
-                  <c>9♥</c>
-                  <c>10♥</c>
-                  <c>8♦</c>
-                  <c>J♣</c>
-                  <c>4♣</c>
-                  <c>7♠</c>
-                </r>
-              </Data>
-            </Configuration>
-            <Annotation DisplayMode="0">
-              <Name />
-              <AnnotationText>Task 2: Players' Hands - Cards Unordered (answers may vary depending on the random shuffle)</AnnotationText>
-              <DefaultAnnotationText />
-              <Left value="False" />
-            </Annotation>
-          </Properties>
-          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxTextInput" />
-        </Node>
-        <Node ToolID="194">
-          <GuiSettings Plugin="AlteryxBasePluginsGui.BrowseV2.BrowseV2">
-            <Position x="1155" y="406" />
-          </GuiSettings>
-          <Properties>
-            <Configuration>
-              <TempFile>C:\ProgramData\Alteryx\Engine\Engine_40964_176556ee6123447888c929df66cc62df_\Engine_39524_625b3e453d84413796713b2bab401b78_.yxdb</TempFile>
-            </Configuration>
-            <Annotation DisplayMode="0">
-              <Name />
-              <DefaultAnnotationText />
-              <Left value="False" />
-            </Annotation>
-          </Properties>
-          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxBrowseV2" />
         </Node>
       </ChildNodes>
     </Node>
@@ -1141,15 +1152,31 @@ Final order: 2♠, 6♠, 2♣, K♣, K♦</Text>
   <Connections>
     <Connection>
       <Origin ToolID="1" Connection="Output" />
-      <Destination ToolID="164" Connection="Input" />
+      <Destination ToolID="199" Connection="Input" />
     </Connection>
     <Connection>
       <Origin ToolID="150" Connection="Output" />
-      <Destination ToolID="165" Connection="Input" />
+      <Destination ToolID="197" Connection="Source" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="199" Connection="Output" />
+      <Destination ToolID="197" Connection="Targets" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="197" Connection="Output" />
+      <Destination ToolID="198" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="198" Connection="Output" />
+      <Destination ToolID="200" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="200" Connection="Output" />
+      <Destination ToolID="201" Connection="Actual" />
     </Connection>
     <Connection>
       <Origin ToolID="168" Connection="Output" />
-      <Destination ToolID="171" Connection="Input" />
+      <Destination ToolID="201" Connection="Expected" />
     </Connection>
     <Connection>
       <Origin ToolID="169" Connection="Output" />
@@ -1174,7 +1201,9 @@ Final order: 2♠, 6♠, 2♣, K♣, K♦</Text>
     <CancelOnError value="False" />
     <DisableBrowse value="False" />
     <EnablePerformanceProfiling value="False" />
+    <RunWithE2 value="True" />
     <DefaultTZ value="Local" />
+    <SortedGrouping value="True" />
     <PredictiveToolsCodePage value="1252" />
     <DisableAllOutput value="False" />
     <ShowAllMacroMessages value="False" />
