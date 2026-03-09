@@ -1,0 +1,529 @@
+<?xml version="1.0"?>
+<AlteryxDocument yxmdVer="2025.2">
+  <Nodes>
+    <Node ToolID="19">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.TextInput.TextInput">
+        <Position x="672" y="84" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <NumRows value="12" />
+          <Fields>
+            <Field name="Contestant" />
+            <Field name="HDPM" />
+            <Field name="Drop Rate per Round" />
+            <Field name="Group" />
+          </Fields>
+          <Data>
+            <r>
+              <c>Joey "The Jaw"</c>
+              <c>8</c>
+              <c>0.3</c>
+              <c>1</c>
+            </r>
+            <r>
+              <c>Linda "The Lunchbox"</c>
+              <c>6.5</c>
+              <c>0.2</c>
+              <c>1</c>
+            </r>
+            <r>
+              <c>Max "Meat Missile"</c>
+              <c>7.2</c>
+              <c>0.4</c>
+              <c>1</c>
+            </r>
+            <r>
+              <c>Carla "Crunch"</c>
+              <c>5.9</c>
+              <c>0.1</c>
+              <c>2</c>
+            </r>
+            <r>
+              <c>Big Rick</c>
+              <c>6.8</c>
+              <c>0.25</c>
+              <c>2</c>
+            </r>
+            <r>
+              <c>Tiny Tina</c>
+              <c>5.5</c>
+              <c>0.15</c>
+              <c>2</c>
+            </r>
+            <r>
+              <c>Doug "Dog King"</c>
+              <c>7.5</c>
+              <c>0.35</c>
+              <c>3</c>
+            </r>
+            <r>
+              <c>Sam "Sauerkraut"</c>
+              <c>6.1</c>
+              <c>0.2</c>
+              <c>3</c>
+            </r>
+            <r>
+              <c>Fiona "FastBite"</c>
+              <c>6.9</c>
+              <c>0.3</c>
+              <c>3</c>
+            </r>
+            <r>
+              <c>Hank "Hungerstorm"</c>
+              <c>7</c>
+              <c>0.2</c>
+              <c>1</c>
+            </r>
+            <r>
+              <c>Betty "Buncrusher"</c>
+              <c>5.7</c>
+              <c>0.1</c>
+              <c>2</c>
+            </r>
+            <r>
+              <c>Carl "Condiment"</c>
+              <c>6</c>
+              <c>0.25</c>
+              <c>3</c>
+            </r>
+          </Data>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <AnnotationText>Input</AnnotationText>
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxTextInput" />
+    </Node>
+    <Node ToolID="21">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.TextInput.TextInput">
+        <Position x="1313" y="95" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <NumRows value="1" />
+          <Fields>
+            <Field name="Winner" />
+            <Field name="Total to Win" />
+          </Fields>
+          <Data>
+            <r>
+              <c>Joey "The Jaw"</c>
+              <c>88.8</c>
+            </r>
+          </Data>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <AnnotationText>Output - Task 1</AnnotationText>
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxTextInput" />
+    </Node>
+    <Node ToolID="22">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.TextInput.TextInput">
+        <Position x="1313" y="183" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <NumRows value="10" />
+          <Fields>
+            <Field name="Contestant" />
+            <Field name="Group" />
+            <Field name="Eaten in Round" />
+            <Field name="Round" />
+          </Fields>
+          <Data>
+            <r>
+              <c>Joey "The Jaw"</c>
+              <c>1</c>
+              <c>80</c>
+              <c>Round 1</c>
+            </r>
+            <r>
+              <c>Max "Meat Missile"</c>
+              <c>1</c>
+              <c>72</c>
+              <c>Round 1</c>
+            </r>
+            <r>
+              <c>Big Rick</c>
+              <c>2</c>
+              <c>68</c>
+              <c>Round 1</c>
+            </r>
+            <r>
+              <c>Carla "Crunch"</c>
+              <c>2</c>
+              <c>59</c>
+              <c>Round 1</c>
+            </r>
+            <r>
+              <c>Doug "Dog King"</c>
+              <c>3</c>
+              <c>75</c>
+              <c>Round 1</c>
+            </r>
+            <r>
+              <c>Fiona "FastBite"</c>
+              <c>3</c>
+              <c>69</c>
+              <c>Round 1</c>
+            </r>
+            <r>
+              <c>Joey "The Jaw"</c>
+              <c>1</c>
+              <c>84.7</c>
+              <c>Round 2</c>
+            </r>
+            <r>
+              <c>Doug "Dog King"</c>
+              <c>1</c>
+              <c>78.65</c>
+              <c>Round 2</c>
+            </r>
+            <r>
+              <c>Max "Meat Missile"</c>
+              <c>2</c>
+              <c>74.8</c>
+              <c>Round 2</c>
+            </r>
+            <r>
+              <c>Fiona "FastBite"</c>
+              <c>2</c>
+              <c>72.6</c>
+              <c>Round 2</c>
+            </r>
+          </Data>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <AnnotationText>Output - Task 2</AnnotationText>
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxTextInput" />
+    </Node>
+    <Node ToolID="31">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.TextInput.TextInput">
+        <Position x="672" y="192" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <NumRows value="3" />
+          <Fields>
+            <Field name="Round" />
+            <Field name="Time" />
+            <Field name="Groups" />
+            <Field name="Contestants" />
+            <Field name="Advance" />
+          </Fields>
+          <Data>
+            <r>
+              <c>1</c>
+              <c>10</c>
+              <c>3</c>
+              <c>4</c>
+              <c>2</c>
+            </r>
+            <r>
+              <c>2</c>
+              <c>11</c>
+              <c>2</c>
+              <c>3</c>
+              <c>2</c>
+            </r>
+            <r>
+              <c>3</c>
+              <c>12</c>
+              <c>4</c>
+              <c>4</c>
+              <c>1</c>
+            </r>
+          </Data>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <AnnotationText>Rounds</AnnotationText>
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxTextInput" />
+    </Node>
+    <Node ToolID="33">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.AppendFields.AppendFields">
+        <Position x="792" y="96" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <CartesianMode>Error</CartesianMode>
+          <SelectConfiguration>
+            <Configuration outputConnection="Output">
+              <OrderChanged value="False" />
+              <CommaDecimal value="False" />
+              <SelectFields>
+                <SelectField field="*Unknown" selected="True" />
+              </SelectFields>
+            </Configuration>
+          </SelectConfiguration>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxAppendFields" />
+    </Node>
+    <Node ToolID="34">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.MultiRowFormula.MultiRowFormula">
+        <Position x="888" y="96" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <UpdateField value="True" />
+          <UpdateField_Name>HDPM</UpdateField_Name>
+          <CreateField_Name>New Field</CreateField_Name>
+          <CreateField_Type>Int32</CreateField_Type>
+          <CreateField_Size>4</CreateField_Size>
+          <OtherRows>Empty</OtherRows>
+          <NumRows value="1" />
+          <Expression>IF IsEmpty([Row-1:Contestant])
+THEN [HDPM]
+ELSE [Row-1:HDPM] - [Drop Rate per Round]
+ENDIF</Expression>
+          <GroupByFields>
+            <Field field="Contestant" />
+          </GroupByFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <AnnotationText>HDPM of 
+each Round</AnnotationText>
+          <DefaultAnnotationText>IF IsEmpty([Row-1:Contestant])
+THEN [HDPM]
+ELSE [Row-1:HDPM] ...</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxMultiRowFormula" />
+    </Node>
+    <Node ToolID="35">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Formula.Formula">
+        <Position x="984" y="96" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <FormulaFields>
+            <FormulaField expression="[HDPM] * [Time]" field="Eaten in Round" size="8" type="Double" enabled="true" />
+          </FormulaFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText><![CDATA[Eaten in Round = [HDPM] * [Time]
+]]></DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFormula" />
+    </Node>
+    <Node ToolID="30">
+      <GuiSettings Plugin="AlteryxGuiToolkit.ToolContainer.ToolContainer">
+        <Position x="54" y="54" width="566" height="470" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Caption>About Challenge 485</Caption>
+          <Style TextColor="#314c4a" FillColor="#ecf2f2" BorderColor="#314c4a" Transparency="25" Margin="25" />
+          <Disabled value="False" />
+          <Folded value="False" />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <AnnotationText>About Challenge 485</AnnotationText>
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <ChildNodes>
+        <Node ToolID="29">
+          <GuiSettings Plugin="AlteryxGuiToolkit.TextBox.TextBox">
+            <Position x="79" y="103" width="516" height="396" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <Text>Challenge 485: Hot Dog Eating Contest Simulation
+
+In this challenge, you’ll simulate a 3-round hot dog eating competition using an iterative macro.
+
+You’re given a dataset of 12 contestants with the following info:
+Name
+Hot Dogs per Minute (HDPM) — their starting speed
+Drop Rate per Minute — how much slower they get each round
+Group — initial competition group (1, 2, or 3)
+Each round, contestants eat hot dogs at their current HDPM.
+
+After each round, the contestant's HDPM drops based on their personal rate.
+
+The rules for each round are as follows:
+
+Round     Time             Group                                     Condition
+Round 1  10 Minutes   3 groups of 4 contestants      top 2 from each group advance
+Round 2  11 Minutes   2 groups of 3 contestants      top 2 from each group advance
+Round 3  12 Minutes   Final 4 compete                     the top eater wins
+
+# Your tasks:
+- Identify the winner and report how many hot dogs they ate in the final round.
+- List all advancing contestants from each round, along with how many hot dogs they ate in that round.
+- Use an iterative macro to simulate each round and apply the performance drop over time.
+
+Hint: Pay close attention to the number of contestants advancing after each round.
+
+Once you have completed your challenge, include your solution file and a screenshot of your workflow as attachments to your comment.</Text>
+              <Font name="Arial" size="8.25" style="0" />
+              <TextColor name="Black" />
+              <FillColor name="White" />
+              <Shape shape="0" />
+              <Justification Justification="3" />
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+        </Node>
+      </ChildNodes>
+    </Node>
+    <Node ToolID="27">
+      <GuiSettings Plugin="AlteryxGuiToolkit.ToolContainer.ToolContainer">
+        <Position x="1464" y="108" width="103" height="24" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Caption>Hint</Caption>
+          <Style TextColor="#252d39" FillColor="#cce6f4" BorderColor="#4ca7da" Transparency="1" Margin="10" />
+          <Disabled value="False" />
+          <Folded value="True" />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <ChildNodes>
+        <Node ToolID="26">
+          <GuiSettings Plugin="AlteryxGuiToolkit.TextBox.TextBox">
+            <Position x="1476" y="144" width="205" height="50" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <Text>Pay close attention to the number of contestants advancing after each round.</Text>
+              <Font name="Arial" size="9.75" style="0" />
+              <TextColor name="Black" />
+              <FillColor name="White" />
+              <Shape shape="3" />
+              <Justification Justification="0" />
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+        </Node>
+      </ChildNodes>
+    </Node>
+    <Node ToolID="37">
+      <GuiSettings>
+        <Position x="1086" y="96" />
+      </GuiSettings>
+      <Properties>
+        <Configuration />
+        <Annotation DisplayMode="0">
+          <Name>C485 (36)</Name>
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings Macro="C:\Users\yoshi\projects\alteryx_challenge\02_Macros\C485.yxmc" />
+    </Node>
+  </Nodes>
+  <Connections>
+    <Connection>
+      <Origin ToolID="19" Connection="Output" />
+      <Destination ToolID="33" Connection="Targets" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="31" Connection="Output" />
+      <Destination ToolID="33" Connection="Source" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="33" Connection="Output" />
+      <Destination ToolID="34" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="34" Connection="Output" />
+      <Destination ToolID="35" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="35" Connection="Output" />
+      <Destination ToolID="37" Connection="Input" />
+    </Connection>
+  </Connections>
+  <Properties>
+    <Memory default="True" />
+    <GlobalRecordLimit value="0" />
+    <TempFiles default="True" />
+    <Annotation on="True" includeToolName="False" />
+    <ConvErrorLimit value="10" />
+    <ConvErrorLimit_Stop value="False" />
+    <CancelOnError value="False" />
+    <DisableBrowse value="False" />
+    <EnablePerformanceProfiling value="False" />
+    <DefaultTZ value="Local" />
+    <PredictiveToolsCodePage value="1252" />
+    <DisableAllOutput value="False" />
+    <ShowAllMacroMessages value="False" />
+    <ShowConnectionStatusIsOn value="True" />
+    <ShowConnectionStatusOnlyWhenRunning value="True" />
+    <ZoomLevel value="-3" />
+    <LayoutType>Horizontal</LayoutType>
+    <IsTemplate value="False" />
+    <MetaInfo>
+      <NameIsFileName value="True" />
+      <Name>Challenge 485_yf</Name>
+      <Description />
+      <RootToolName />
+      <ToolVersion />
+      <ToolInDb value="False" />
+      <CategoryName />
+      <SearchTags />
+      <Author />
+      <Company />
+      <Copyright />
+      <DescriptionLink actual="" displayed="" />
+      <Example>
+        <Description />
+        <File />
+      </Example>
+      <WorkflowId value="88832104-3c4e-4293-be71-b844230b260e" />
+      <Telemetry>
+        <PreviousWorkflowId value="bffe0b13-7206-4df2-b64d-12e96e1a8892" />
+        <OriginWorkflowId value="e7b005d5-e996-4773-b832-b64314257c0f" />
+      </Telemetry>
+      <PlatformWorkflowId value="" />
+    </MetaInfo>
+    <Events>
+      <Enabled value="True" />
+    </Events>
+  </Properties>
+</AlteryxDocument>
